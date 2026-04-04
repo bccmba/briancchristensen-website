@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Technical debt is a common challenge for product managers. It’s the hidden cost of quick fixes and outdated code that can slow down development, intro..." />
+  <title>The Ultimate Guide to Managing Technical Debt as a Product Manager — Brian C. Christensen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  
+  <style>
+    .post { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+    .post-header { margin-bottom: 3rem; text-align: center; }
+    .post-header .post-date { font-size: 13px; color: var(--text-muted); margin-bottom: 1rem; }
+    .post-header .post-title { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--navy); letter-spacing: -1px; line-height: 1.2; }
+    .post-content { font-size: 17px; line-height: 1.75; color: var(--text); }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 { font-family: var(--font-serif); font-size: 24px; color: var(--navy); margin: 2.5rem 0 1rem; letter-spacing: -0.5px; }
+    .post-content h3 { font-family: var(--font-serif); font-size: 20px; color: var(--navy); margin: 2rem 0 0.75rem; }
+    .post-content ul, .post-content ol { margin: 0 0 1.5rem 1.5rem; }
+    .post-content li { margin-bottom: 0.5rem; }
+    .post-content a { color: var(--teal); text-decoration: underline; }
+    .post-content a:hover { color: var(--navy); }
+    .post-content img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5rem 0; }
+    .post-content blockquote { border-left: 3px solid var(--teal); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .post-content pre { background: var(--bg-soft); padding: 1rem; border-radius: 4px; overflow-x: auto; margin: 1.5rem 0; }
+    .post-content code { font-family: monospace; font-size: 14px; }
+    .post-footer { margin-top: 3rem; padding-top: 2rem; border-top: 0.5px solid var(--border); }
+    .back-link { color: var(--teal); text-decoration: none; font-size: 14px; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#writing">Writing</a></li>
+        <li><a href="/#ai-services">AI Services</a></li>
+        <li><a href="https://briancchristensen.gumroad.com" target="_blank">PM Playbook</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="post-banner" style="height: 200px; background-color: #1B3A5C; display: flex; align-items: center; justify-content: center;">
+    <h1 style="font-family: 'Fraunces', serif; font-size: clamp(24px, 4vw, 40px); font-weight: 300; color: white; text-align: center; padding: 0 1rem;">The Ultimate Guide to Managing Technical Debt as a Product Manager</h1>
+  </div>
+
+  <article class="post">
+    <header class="post-header">
+      <div class="post-date">July 11, 2024</div>
+      <h1 class="post-title">The Ultimate Guide to Managing Technical Debt as a Product Manager</h1>
+    </header>
+    <div class="post-content">
+<p>Technical debt is a common challenge for product managers. It’s the hidden cost of quick fixes and outdated code that can slow down development, introduce bugs, and reduce overall product quality. Effectively managing technical debt is crucial for maintaining a healthy, scalable product. Here’s how you can do it:</p>
+
+
+
+<h3 class="wp-block-heading">1. Understand and Identify Technical Debt</h3>
+
+
+
+<p><strong>Definition:</strong> Ensure you and your team have a shared understanding of what constitutes technical debt. It can range from quick fixes that were made to meet deadlines to outdated code and lack of documentation.</p>
+
+
+
+<p><strong>Identification:</strong> Work closely with your technical team to identify areas of technical debt. Conduct code reviews and technical audits to spot potential issues.</p>
+
+
+
+<h3 class="wp-block-heading">2. Prioritize Technical Debt</h3>
+
+
+
+<p><strong>Impact Assessment:</strong> Evaluate the impact of the technical debt on the product's performance, security, and future scalability. This helps in understanding which areas need immediate attention.</p>
+
+
+
+<p><strong>Risk Management:</strong> Consider the risks associated with not addressing the technical debt. Prioritize items that pose the highest risk or have the greatest impact on the product’s success.</p>
+
+
+
+<h3 class="wp-block-heading">3. Integrate Technical Debt into the Product Roadmap</h3>
+
+
+
+<p><strong>Visible Backlog:</strong> Include technical debt items in your product backlog. This makes them visible to the entire team and ensures they are considered during sprint planning.</p>
+
+
+
+<p><strong>Regular Reviews:</strong> Conduct regular reviews and updates of the technical debt backlog to ensure it remains current and relevant.</p>
+
+
+
+<h3 class="wp-block-heading">4. Allocate Time and Resources</h3>
+
+
+
+<p><strong>Sprint Planning:</strong> Allocate a certain percentage of each sprint or iteration to address technical debt. This ensures continuous improvement without overwhelming the development process.</p>
+
+
+
+<p><strong>Dedicated Sprints:</strong> Occasionally, dedicate entire sprints specifically to resolving technical debt. This can significantly reduce the accumulation of technical debt over time.</p>
+
+
+
+<h3 class="wp-block-heading">5. Communicate with Stakeholders</h3>
+
+
+
+<p><strong>Transparency:</strong> Be transparent with stakeholders about the existence and importance of technical debt. Clear communication helps in gaining their support for necessary maintenance work.</p>
+
+
+
+<p><strong>Education:</strong> Educate non-technical stakeholders about the long-term benefits of addressing technical debt. Improved product stability and reduced maintenance costs are compelling reasons to invest in technical debt reduction.</p>
+
+
+
+<h3 class="wp-block-heading">6. Monitor and Measure Progress</h3>
+
+
+
+<p><strong>Metrics:</strong> Establish metrics to track the progress of technical debt reduction. This could include code quality metrics, bug counts, or system performance indicators.</p>
+
+
+
+<p><strong>Feedback Loops:</strong> Implement feedback loops with the technical team to continuously assess the effectiveness of your technical debt management strategies.</p>
+
+
+
+<h3 class="wp-block-heading">7. Foster a Culture of Quality</h3>
+
+
+
+<p><strong>Best Practices:</strong> Encourage the adoption of best practices such as code reviews, automated testing, and continuous integration/continuous deployment (CI/CD). These practices help prevent the accumulation of new technical debt.</p>
+
+
+
+<p><strong>Team Collaboration:</strong> Promote a culture of collaboration and open communication between product managers and technical teams. A shared commitment to maintaining a high-quality codebase is crucial for long-term success.</p>
+
+
+
+<h3 class="wp-block-heading">8. Continuous Improvement</h3>
+
+
+
+<p><strong>Retrospectives:</strong> Use retrospectives to reflect on what’s working and what’s not in terms of managing technical debt. Adjust your strategies based on these insights.</p>
+
+
+
+<p><strong>Innovation Time:</strong> Allow developers some "innovation time" to work on improvements that may not be directly tied to the current roadmap but can help in reducing technical debt.</p>
+
+
+
+<h3 class="wp-block-heading">Conclusion</h3>
+
+
+
+<p>By embedding these practices into your product management approach, you can effectively manage technical debt, ensuring it doesn't hinder your product's growth and success. Regularly addressing technical debt not only improves the quality and performance of your product but also boosts the morale and efficiency of your development team. Stay proactive, keep communicating, and continuously refine your strategies to keep technical debt under control.</p>
+    </div>
+    <footer class="post-footer">
+      <a href="index.html" class="back-link">← Back to all posts</a>
+    </footer>
+  </article>
+
+</body>
+</html>

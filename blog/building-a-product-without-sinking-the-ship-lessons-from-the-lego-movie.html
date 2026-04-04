@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="There’s a special joy in building LEGOs with my kids. We spread out the pieces, dig into the bright, multicolored piles, and dive into creating whatev..." />
+  <title>Building a Product Without Sinking the Ship: Lessons from the LEGO Movie — Brian C. Christensen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  
+  <style>
+    .post { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+    .post-header { margin-bottom: 3rem; text-align: center; }
+    .post-header .post-date { font-size: 13px; color: var(--text-muted); margin-bottom: 1rem; }
+    .post-header .post-title { font-family: var(--font-serif); font-size: clamp(28px, 4vw, 42px); font-weight: 300; color: var(--navy); letter-spacing: -1px; line-height: 1.2; }
+    .post-content { font-size: 17px; line-height: 1.75; color: var(--text); }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 { font-family: var(--font-serif); font-size: 24px; color: var(--navy); margin: 2.5rem 0 1rem; letter-spacing: -0.5px; }
+    .post-content h3 { font-family: var(--font-serif); font-size: 20px; color: var(--navy); margin: 2rem 0 0.75rem; }
+    .post-content ul, .post-content ol { margin: 0 0 1.5rem 1.5rem; }
+    .post-content li { margin-bottom: 0.5rem; }
+    .post-content a { color: var(--teal); text-decoration: underline; }
+    .post-content a:hover { color: var(--navy); }
+    .post-content img { max-width: 100%; height: auto; border-radius: 4px; margin: 1.5rem 0; }
+    .post-content blockquote { border-left: 3px solid var(--teal); padding-left: 1.5rem; margin: 1.5rem 0; font-style: italic; color: var(--text-muted); }
+    .post-content pre { background: var(--bg-soft); padding: 1rem; border-radius: 4px; overflow-x: auto; margin: 1.5rem 0; }
+    .post-content code { font-family: monospace; font-size: 14px; }
+    .post-footer { margin-top: 3rem; padding-top: 2rem; border-top: 0.5px solid var(--border); }
+    .back-link { color: var(--teal); text-decoration: none; font-size: 14px; }
+    .back-link:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#writing">Writing</a></li>
+        <li><a href="/#ai-services">AI Services</a></li>
+        <li><a href="https://briancchristensen.gumroad.com" target="_blank">PM Playbook</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="post-banner" style="height: 200px; background-color: #1B3A5C; display: flex; align-items: center; justify-content: center;">
+    <h1 style="font-family: 'Fraunces', serif; font-size: clamp(24px, 4vw, 40px); font-weight: 300; color: white; text-align: center; padding: 0 1rem;">Building a Product Without Sinking the Ship: Lessons from the LEGO Movie</h1>
+  </div>
+
+  <article class="post">
+    <header class="post-header">
+      <div class="post-date">November 13, 2024</div>
+      <h1 class="post-title">Building a Product Without Sinking the Ship: Lessons from the LEGO Movie</h1>
+    </header>
+    <div class="post-content">
+<p>There’s a special joy in building LEGOs with my kids. We spread out the pieces, dig into the bright, multicolored piles, and <em>dive into creating whatever our imagination wants. Sometimes, though, things get a bit chaotic. While I might follow</em> the instructions for a spaceship, my kids might decide that those same pieces should build a castle instead! The resulting "creation" might be colorful and unique, but it doesn't exactly fly or defend a kingdom very well. This moment reminds me of a scene in <em>The LEGO Movie</em>, where the "Master Builders"—a group of characters known for their creativity and skill—attempt to build a submarine. Despite each of them being brilliant on their own, their inability to work as a cohesive team results in the disaster of a submarine that sinks almost immediately.</p>
+
+
+
+<p>This humorous moment, surprisingly, offers valuable insights into product management, especially for those of us working with software developers. As a product owner or product manager, you’re often working with a range of talented engineers, each with unique perspectives and ideas. The challenge lies in guiding this talent in a unified direction—ensuring that you don’t just end up with a chaotic collection of features, but a solid product that achieves its goals.</p>
+
+
+
+<h3 class="wp-block-heading">Building with Purpose: Keeping Developers Aligned</h3>
+
+
+
+<p>When you're building a product, your team may be filled with "Master Builders" in the form of high-level developers, each capable of creating amazing features independently. But just like in <em>The LEGO Movie</em>, if these brilliant minds don’t know how to work together or don’t have a unified vision, the product may “sink” under its complexity.</p>
+
+
+
+<p>As a product owner, it’s your responsibility to foster collaboration, communication, and alignment. This doesn't mean stifling creativity; instead, it means focusing it. Here’s how:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Define a Clear Vision</strong>: Developers thrive when they know why they’re building something, not just what they’re building. Communicate the end goal clearly so that each developer sees how their work contributes to the larger picture. Without a shared understanding, different team members might end up building what they each think is best—resulting in features that don’t align well together.</li>
+
+
+
+<li><strong>Encourage Open Communication</strong>: Just like Master Builders who each have their own methods, developers may have unique coding styles and problem-solving approaches. Regular check-ins and open channels for sharing ideas can help ensure that everyone’s on the same page. Agile ceremonies like stand-ups, sprint planning, and retrospectives are great opportunities for this.</li>
+
+
+
+<li><strong>Balance Creativity with Constraints</strong>: High-level developers often come up with innovative solutions, but it’s essential to keep them grounded. Define the technical and strategic constraints upfront. Giving them a framework—like “we need a submarine, not a spaceship”—allows them to focus their creativity within helpful boundaries.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">The Journey of an Entry-Level Product Manager</h3>
+
+
+
+<p>If you're stepping into product management for the first time, the challenge might feel like stepping onto a LEGO mat with the pieces scattered everywhere. You have ideas, your team has ideas, and sometimes it feels like everyone is working on a different part of the set without a clear plan. Here’s how you, as an entry-level product manager, can make sure your team’s “submarine” doesn’t sink:</p>
+
+
+
+<ol class="wp-block-list">
+<li><strong>Embrace Humility and Curiosity</strong>: No one expects you to know everything about product management from day one. Embrace your role as a facilitator, and don’t hesitate to ask questions. Seek to understand why developers make certain decisions and learn from their technical insights.</li>
+
+
+
+<li><strong>Establish Consistent Routines</strong>: Just as in the movie, where the Master Builders need routines to coordinate their creativity, use Agile frameworks to give the team structure. Sprints, Kanban boards, and other PM tools are more than just checklists; they’re building blocks to help you organize the team’s efforts effectively.</li>
+
+
+
+<li><strong>Focus on One Brick at a Time</strong>: It’s easy to get overwhelmed by the vision of the “finished product.” But, just like building LEGOs, break it down. Work closely with developers on individual tasks, ensuring that each piece contributes to the whole. When small blocks come together successfully, the big picture takes shape more easily.</li>
+
+
+
+<li><strong>Celebrate Small Wins</strong>: Recognizing the team’s progress builds morale and reinforces the value of collaboration. Every piece of the “submarine” that works as intended is worth celebrating.</li>
+</ol>
+
+
+
+<h3 class="wp-block-heading">Building Together to Avoid the Sinking Ship</h3>
+
+
+
+<p>Every product is a mix of creativity, structure, and alignment, and it takes everyone working together to make it float. My experiences building LEGOs with my kids may be lighthearted, but the lessons from those moments apply to even the most complex product builds. By embracing clear communication, uniting vision, and fostering collaboration, we can turn our teams of Master Builders into a synchronized crew, delivering products that won’t sink at launch but will sail into success.</p>
+    </div>
+    <footer class="post-footer">
+      <a href="index.html" class="back-link">← Back to all posts</a>
+    </footer>
+  </article>
+
+</body>
+</html>

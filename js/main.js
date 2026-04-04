@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const windowHeight = window.innerHeight;
     revealElements.forEach((el, i) => {
       const elementTop = el.getBoundingClientRect().top;
-      const revealPoint = 100;
+      const revealPoint = 50;
       
       if (elementTop < windowHeight - revealPoint) {
         el.classList.add('visible');

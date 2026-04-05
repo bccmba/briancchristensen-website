@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page Not Found — Brian C. Christensen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <style>
+    .error-page {
+      min-height: calc(100vh - 140px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+    .error-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 0;
+      max-width: 700px;
+      width: 100%;
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .error-accent {
+      width: 6px;
+      background: var(--teal);
+    }
+    .error-content {
+      padding: 3rem 2.5rem;
+    }
+    .error-code {
+      font-family: var(--font-serif);
+      font-size: 80px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -4px;
+      margin-bottom: 0.5rem;
+      opacity: 0.15;
+    }
+    .error-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .error-title {
+      font-family: var(--font-serif);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -1px;
+      margin-bottom: 1rem;
+    }
+    .error-title em {
+      font-style: italic;
+      color: var(--blue);
+    }
+    .error-body {
+      font-size: 15px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      max-width: 420px;
+    }
+    .error-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .error-divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+    .error-suggestions {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .error-suggestion-links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .error-suggestion-links a {
+      font-size: 13px;
+      color: var(--teal);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: color 0.2s;
+    }
+    .error-suggestion-links a:hover { color: var(--navy); }
+    .error-suggestion-links a::before {
+      content: '→';
+      font-size: 12px;
+    }
+    @media (max-width: 600px) {
+      .error-inner { grid-template-columns: 1fr; }
+      .error-accent { width: 100%; height: 6px; }
+      .error-content { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/#writing">Writing</a></li>
+        <li><a href="/#ai-services">AI Services</a></li>
+        <li><a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="error-page">
+    <div class="error-inner">
+      <div class="error-accent"></div>
+      <div class="error-content">
+        <div class="error-code">404</div>
+        <p class="error-eyebrow">Page not found</p>
+        <h1 class="error-title">This page <em>doesn't exist</em> — yet.</h1>
+        <p class="error-body">The link you followed may be broken, outdated, or the page may have moved. Let's get you back on track.</p>
+        <div class="error-links">
+          <a href="/" class="btn-primary">Go home</a>
+          <a href="/blog/" class="btn-secondary">Browse writing</a>
+        </div>
+        <div class="error-divider"></div>
+        <p class="error-suggestions">You might be looking for</p>
+        <div class="error-suggestion-links">
+          <a href="/#work">Featured work & achievements</a>
+          <a href="/#ai-services">AI consulting services</a>
+          <a href="/blog/">All blog posts</a>
+          <a href="/#contact">Get in touch</a>
+          <a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer">PM Promotion Playbook</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/#writing">Writing</a>
+      <a href="/#ai-services">AI Services</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+</body>
+</html>

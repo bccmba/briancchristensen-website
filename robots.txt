@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://briancchristensen.com/sitemap.xml

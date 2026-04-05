@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Main pages -->
+  <url>
+    <loc>https://briancchristensen.com/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://briancchristensen.com/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Blog posts -->
+  <url><loc>https://briancchristensen.com/blog/a-call-to-action-step-two-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/a-seat-at-the-table.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/approach-step-six-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/building-a-product-without-sinking-the-ship-lessons-from-the-lego-movie.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/coaching-up-vs-coaching-out-when-to-choose-each-approach.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/crossing-the-threshold-step-four-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/defining-and-articulating-product-strategy-the-role-of-a-group-product-manager.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/elevating-your-product-management-game-overcoming-the-comfort-of-good.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/empowering-team-members-unlocking-productivity-and-innovation.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/finding-your-true-north-star.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/getting-water-to-the-end-of-the-row.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/group-product-manager-gpm-a-comprehensive-overview.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/henry-ford-and-the-v8-engine-a-lesson-in-product-management.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/how-product-managers-remove-distractions-to-focus-on-what-matters.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/how-to-deliver-bad-news-effectively.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/how-walking-can-enhance-product-management.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/importance-of-feedback.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/just-say-no-kind-of.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/lessons-learned-what-i-wish-i-knew-as-a-new-product-manager.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/mastering-innovation-unleashing-the-power-of-the-product-kata.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/minimum-viable-product-mvp-vs-maximum-lovable-product-mlp.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/ordeal-step-seven-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/presenting-like-a-prodstar.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/proactive-software-development-vs-reactive-software-development-which-approach-is-best-for-your-business.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/return-home-step-nine-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/reward-step-eight-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/setting-the-cultural-tone-how-the-product-owner-shapes-software-development-teams.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/starting-strong-as-a-new-product-owner-why-focusing-on-the-next-new-feature-is-key.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/supernatural-aid-step-three-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-bazinsky-principle-a-lesson-in-prioritization-and-collaboration.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-pitfall-of-mediocrity-how-good-is-the-enemy-of-great-in-product-management.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-product-manager-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-radical-shift-in-product-management-pros-and-cons-of-major-change.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-status-quo-step-one-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-terror-of-product-management.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-ultimate-guide-to-managing-technical-debt-as-a-product-manager.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/the-wisdom-of-jurassic-park-a-lesson-for-product-managers.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/trials-step-five-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://briancchristensen.com/blog/understanding-product-vs-project-management.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
+
+</urlset>

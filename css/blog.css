@@ -72,6 +72,13 @@
 .post-cat-pm { color: var(--blue); background: var(--blue-light); }
 .post-cat-leadership { color: var(--teal); background: var(--teal-light); }
 .post-cat-ai { color: #7C3AED; background: #F3E8FF; }
+.post-cat-pm { background: var(--blue-light); color: var(--blue-dark); }
+.post-cat-leadership { background: var(--teal-light); color: var(--teal-dark); }
+.post-cat-ai { background: #EDE9FE; color: #5B21B6; }
+.post-meta { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem; }
+.post-reading-time { font-size: 11px; color: var(--text-muted); }
+.no-results { grid-column: 1 / -1; padding: 4rem 2rem; text-align: center; color: var(--text-muted); }
+.no-results-hint { font-size: 13px; margin-top: 0.5rem; }
 .post-title {
   font-family: var(--font-serif);
   font-size: 20px;
@@ -199,7 +206,6 @@
 .filter-tab[data-category="leadership"].active .tab-dot,
 .filter-tab[data-category="ai"].active .tab-dot {
   background: white;
-}
 }
 
 /* Back to Top Button */

@@ -34,13 +34,27 @@
     <p class="eyebrow">Writing & thinking</p>
     <h1 class="hero-title">Articles & Insights</h1>
     <p class="hero-sub">Thoughts on product management, leadership, and AI transformation.</p>
-    <div class="blog-search">
-      <input type="text" id="search" placeholder="Search articles..." aria-label="Search articles" />
-      <div class="blog-filters" id="filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="pm">PM</button>
-        <button class="filter-btn" data-category="leadership">Leadership</button>
-        <button class="filter-btn" data-category="ai">AI</button>
+    <div class="blog-controls">
+      <div class="search-wrapper">
+        <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="search" placeholder="Search articles by title or keyword..." aria-label="Search articles" />
+        <button class="search-clear" aria-label="Clear search" type="button">&times;</button>
+      </div>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-category="all">
+          <span class="tab-dot"></span>All
+        </button>
+        <button class="filter-tab" data-category="pm">
+          <span class="tab-dot"></span>PM
+        </button>
+        <button class="filter-tab" data-category="leadership">
+          <span class="tab-dot"></span>Leadership
+        </button>
+        <button class="filter-tab" data-category="ai">
+          <span class="tab-dot"></span>AI
+        </button>
       </div>
     </div>
   </section>

@@ -43,12 +43,13 @@ document.addEventListener('DOMContentLoaded', () => {
   ];
 
   const searchInput = document.getElementById('search');
-  const filterBtns = document.querySelectorAll('.filter-btn');
+  const filterBtns = document.querySelectorAll('.filter-tab');
   const postsContainer = document.getElementById('posts');
+  const searchClear = document.querySelector('.search-clear');
 
   function renderPosts(filteredPosts) {
     if (filteredPosts.length === 0) {
-      postsContainer.innerHTML = '<div class="no-results">No posts found matching your criteria.</div>';
+      postsContainer.innerHTML = '<div class="no-results"><p>No articles found</p><p class="no-results-hint">Try adjusting your search or filter</p></div>';
       return;
     }
     
@@ -58,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <span class="post-date">${post.date}</span>
           <span class="post-reading-time">${post.readingTime} min read</span>
         </div>
-        <div class="post-cat">${post.category.toUpperCase()}</div>
+        <div class="post-cat post-cat-${post.category}">${post.category.toUpperCase()}</div>
         <h2 class="post-title">${post.title}</h2>
         <p class="post-excerpt">${post.excerpt}</p>
         <span class="post-link">Read post →</span>
@@ -68,7 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function filterPosts() {
     const searchTerm = searchInput.value.toLowerCase();
-    const activeCategory = document.querySelector('.filter-btn.active').dataset.category;
+    const activeCategory = document.querySelector('.filter-tab.active').dataset.category;
     
     const filtered = posts.filter(post => {
       const matchesSearch = post.title.toLowerCase().includes(searchTerm) || 
@@ -82,6 +83,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   searchInput.addEventListener('input', filterPosts);
+  
+  searchClear.addEventListener('click', () => {
+    searchInput.value = '';
+    filterPosts();
+    searchInput.focus();
+  });
+
+  // Show/hide clear button based on input
+  searchInput.addEventListener('input', () => {
+    searchClear.style.opacity = searchInput.value ? '1' : '0';
+  });
   
   filterBtns.forEach(btn => {
     btn.addEventListener('click', () => {

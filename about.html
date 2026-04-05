@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="About Brian C. Christensen — Executive Product Manager with 20+ years leading product teams across HealthTech, wellness, and direct-selling industries at enterprise scale." />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:title" content="About Brian C. Christensen — Executive Product Manager" />
+  <meta property="og:description" content="20+ years leading product teams at enterprise scale across HealthTech and global markets. Speaker, SAFe® certified, AI transformation leader." />
+  <meta property="og:url" content="https://briancchristensen.com/about.html" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:image" content="https://briancchristensen.com/favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="About Brian C. Christensen — Executive Product Manager" />
+  <meta name="twitter:description" content="20+ years leading product teams at enterprise scale across HealthTech and global markets." />
+  <title>About — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <style>
+    /* ── ABOUT HERO ── */
+    .about-hero {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      border-bottom: 0.5px solid var(--border);
+      min-height: 420px;
+    }
+    .about-hero-left {
+      padding: 4rem 3rem 4rem 2rem;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .about-title {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 300;
+      line-height: 1.05;
+      color: var(--navy);
+      letter-spacing: -2px;
+      margin-bottom: 1.5rem;
+    }
+    .about-title em { font-style: italic; color: var(--blue); }
+    .about-lead {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 420px;
+      margin-bottom: 1.75rem;
+    }
+    .about-lead strong { color: var(--text); font-weight: 500; }
+
+    .about-hero-right {
+      padding: 4rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.75rem;
+    }
+    .hero-avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 300;
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+    .hero-name {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .hero-role {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .quick-facts { display: flex; flex-direction: column; gap: 10px; }
+    .quick-fact {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .quick-fact-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--navy);
+      padding: 11px 0;
+      border-bottom: 0.5px solid var(--border);
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 4rem;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-item { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .ticker-item span { color: #5DCAA5; font-weight: 500; margin-right: 6px; }
+
+    /* ── SECTION LABEL ── */
+    .sec-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      padding: 1.25rem 2rem 1rem;
+      border-bottom: 0.5px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .section-wrap { border-bottom: 0.5px solid var(--border); }
+
+    /* ── STORY SECTION ── */
+    .story {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .story-block {
+      padding: 2.5rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .story-block:last-child { border-right: none; }
+    .story-heading {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .story-heading em { font-style: italic; color: var(--blue); }
+    .story-body {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .story-body p { margin-bottom: 1rem; }
+    .story-body p:last-child { margin-bottom: 0; }
+    .story-body strong { color: var(--text); font-weight: 500; }
+
+    /* ── PHILOSOPHY ── */
+    .philosophy {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .phil-card {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+      transition: background 0.2s;
+    }
+    .phil-card:last-child { border-right: none; }
+    .phil-card:hover { background: var(--bg-soft); }
+    .phil-number {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--navy);
+      opacity: 0.12;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -2px;
+    }
+    .phil-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+    .phil-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-muted);
+    }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial {
+      padding: 2.5rem 2rem;
+      display: grid;
+      grid-template-columns: 3px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .t-bar { background: var(--teal); border-radius: 99px; align-self: stretch; }
+    .t-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+    .t-attr { font-size: 13px; color: var(--text-muted); }
+    .t-attr strong { color: var(--text); font-weight: 500; }
+
+    /* ── CREDENTIALS ── */
+    .credentials {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cred-block {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .cred-block:last-child { border-right: none; }
+    .cred-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+    }
+    .cred-list { display: flex; flex-direction: column; gap: 10px; }
+    .cred-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .cred-icon {
+      width: 20px;
+      height: 20px;
+      border-radius: 4px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .icon-navy { background: var(--navy); color: white; }
+    .icon-teal { background: var(--teal); color: white; }
+    .icon-blue { background: var(--blue); color: white; }
+    .cred-item-title { font-weight: 500; color: var(--text); display: block; margin-bottom: 2px; }
+
+    /* ── CTA BOTTOM ── */
+    .about-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cta-left {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .cta-left-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .cta-left-title em { font-style: italic; color: var(--blue); }
+    .cta-left-body { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+    .cta-right {
+      padding: 2.25rem 2rem 2.25rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1rem;
+    }
+    .cta-right-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.3;
+      letter-spacing: -0.5px;
+    }
+    .cta-right-body { font-size: 14px; color: var(--text-muted); line-height: 1.7; }
+    .skills-pills { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 0.5rem; }
+    .pill {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      border: 0.5px solid var(--border-mid);
+      color: var(--text-muted);
+    }
+    .pill-solid-navy { background: var(--navy); color: white; font-size: 11px; padding: 4px 12px; border-radius: 99px; font-weight: 500; }
+    .pill-solid-teal { background: var(--teal); color: white; font-size: 11px; padding: 4px 12px; border-radius: 99px; font-weight: 500; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .about-hero { grid-template-columns: 1fr; }
+      .about-hero-left { padding: 3rem 1.5rem 2rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .about-hero-right { padding: 2rem 1.5rem; }
+      .story { grid-template-columns: 1fr; }
+      .story-block { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .story-block:last-child { border-bottom: none; }
+      .philosophy { grid-template-columns: 1fr; }
+      .phil-card { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .phil-card:last-child { border-bottom: none; }
+      .credentials { grid-template-columns: 1fr; }
+      .cred-block { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cred-block:last-child { border-bottom: none; }
+      .about-cta { grid-template-columns: 1fr; }
+      .cta-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cta-right { padding: 2rem 1.5rem; }
+      .sec-label { padding: 1.25rem 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/about.html" style="color: var(--navy);">About</a></li>
+        <li><a href="/#writing">Writing</a></li>
+        <li><a href="/#ai-services">AI Services</a></li>
+        <li><a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="about-hero">
+    <div class="about-hero-left">
+      <p class="eyebrow">Executive Product Manager · 20+ Years · HealthTech</p>
+      <h1 class="about-title">Building products that<br><em>actually move</em><br>the number.</h1>
+      <p class="about-lead">
+        For over two decades I've led product teams across <strong>healthcare, wellness, and direct-selling</strong> — many operating in highly regulated, multinational environments. I specialize in the work that shows up on the P&L: cutting operational waste, growing retention, and now leading the AI initiatives that multiply what teams can do.
+      </p>
+      <div class="btn-row">
+        <a href="/#contact" class="btn-primary">Get in touch</a>
+        <a href="/blog/" class="btn-secondary">Read my writing</a>
+      </div>
+    </div>
+    <div class="about-hero-right">
+      <div class="hero-avatar">BC</div>
+      <div class="hero-name">Brian C. Christensen</div>
+      <div class="hero-role">Director of Product Management</div>
+      <div class="quick-facts">
+        <div class="quick-fact"><div class="quick-fact-dot"></div><span>20+ years in product management and software engineering</span></div>
+        <div class="quick-fact"><div class="quick-fact-dot"></div><span>Led products across 25+ global markets</span></div>
+        <div class="quick-fact"><div class="quick-fact-dot"></div><span>Enterprise scale — 5,000+ employee organizations</span></div>
+        <div class="quick-fact"><div class="quick-fact-dot"></div><span>Speaker at Front Conference 2023</span></div>
+        <div class="quick-fact"><div class="quick-fact-dot"></div><span>SAFe® certified · Pendo certified · Lean-Agile</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>Experience</span>20+ years in product</span>
+      <span class="ticker-item"><span>Scale</span>Enterprise · 25+ global markets · 5,000+ employees</span>
+      <span class="ticker-item"><span>Impact</span>75% faster payouts · 50%+ retention · 10× output</span>
+      <span class="ticker-item"><span>Domain</span>HealthTech · Compensation Systems · AI Transformation</span>
+      <span class="ticker-item"><span>Speaking</span>Front Conference 2023</span>
+      <span class="ticker-item"><span>Experience</span>20+ years in product</span>
+      <span class="ticker-item"><span>Scale</span>Enterprise · 25+ global markets · 5,000+ employees</span>
+      <span class="ticker-item"><span>Impact</span>75% faster payouts · 50%+ retention · 10× output</span>
+      <span class="ticker-item"><span>Domain</span>HealthTech · Compensation Systems · AI Transformation</span>
+      <span class="ticker-item"><span>Speaking</span>Front Conference 2023</span>
+    </div>
+  </div>
+
+  <!-- ── STORY ── -->
+  <div class="section-wrap">
+    <div class="sec-label">My story</div>
+    <div class="story">
+      <div class="story-block">
+        <h2 class="story-heading">I started in account management.<br><em>Frustration drove me to engineering.</em></h2>
+        <div class="story-body">
+          <p>My career didn't start in product or engineering — it started on the client side. As an account manager, my job was to understand what clients needed and make sure they got it. I was good at it. I understood stakeholders, I understood relationships, and I understood what it meant to be accountable to someone else's success.</p>
+          <p>But there was a constant friction I couldn't shake. I was always waiting — waiting on development for data, waiting for system updates, waiting for answers to questions my clients needed answered <em>now</em>. I could see exactly what my clients needed. I just couldn't get there fast enough.</p>
+          <p>I knew there had to be a better way. So I learned engineering. Not to become a developer — but to stop being dependent on one. I started in reporting and analytics, picking up SQL, learning how data actually flowed through systems. And that changed everything.</p>
+          <p>Suddenly I could pull my own data instead of waiting on reports. I could sit with engineers and have real conversations, not just translate requirements. I could understand <em>why</em> something was hard to build, not just <em>that</em> it was. <strong>That foundation — built out of client-side frustration — made me a fundamentally different kind of product leader.</strong></p>
+        </div>
+      </div>
+      <div class="story-block">
+        <h2 class="story-heading">20 years of learning<br><em>by doing hard things.</em></h2>
+        <div class="story-body">
+          <p>One of the most formative projects of my career came when I was asked to lead a complex distributor compensation plan overhaul — a system I didn't fully understand at the time. Commission structures, rank qualifications, payout rules across multiple markets. It felt overwhelming.</p>
+          <p>Instead of stepping back, I dove in. I asked every question. I sat with stakeholders from finance, compliance, and sales operations until I could see how the whole system fit together. That project became one of my most valuable learning experiences — and the foundation for the compensation work I still lead today.</p>
+          <p>That's been the pattern. <strong>You won't always feel ready. Do it anyway.</strong> That's where the growth is.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PHILOSOPHY ── -->
+  <div class="section-wrap">
+    <div class="sec-label">How I think about product</div>
+    <div class="philosophy">
+      <div class="phil-card">
+        <div class="phil-number">01</div>
+        <div class="phil-title">Strategy is a conversation, not a document</div>
+        <p class="phil-body">The most successful product strategies I've seen aren't PDFs — they're living conversations between customer data, business goals, and evolving capabilities. Strategy should be a shared language, not a top-down directive. Start every session by identifying what won't change. Adapt the rest.</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-number">02</div>
+        <div class="phil-title">Execution beats elegance, every time</div>
+        <p class="phil-body">A perfect roadmap means nothing without consistent delivery. I favor repeatable execution over complex ambition — lean processes, shared visibility, and transparency over perfection. The goal is to become more predictable, which builds trust at every level. Kill hero culture. Elevate frameworks and feedback loops.</p>
+      </div>
+      <div class="phil-card">
+        <div class="phil-number">03</div>
+        <div class="phil-title">Great PMs empower — they don't control</div>
+        <p class="phil-body">My job isn't to be the smartest person in the room. It's to unlock the team's brilliance. Provide the "why" and let teams define the "how." When people feel trusted to own their work, they deliver outcomes no single person could have planned for. Culture is the product too.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TESTIMONIAL ── -->
+  <div class="section-wrap">
+    <div class="testimonial">
+      <div class="t-bar"></div>
+      <div>
+        <p class="t-quote">"Brian is an intelligent, dedicated, hard-working individual who quickly gains the trust of colleagues, team members, stakeholders and executives. He is actively involved in the Agile community, and always looking to improve himself, his team and the process."</p>
+        <p class="t-attr"><strong>Colleague</strong> · USANA Health Sciences</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CREDENTIALS ── -->
+  <div class="section-wrap">
+    <div class="sec-label">Credentials & experience</div>
+    <div class="credentials">
+      <div class="cred-block">
+        <div class="cred-title">Certifications</div>
+        <div class="cred-list">
+          <div class="cred-item">
+            <div class="cred-icon icon-navy">S</div>
+            <div>
+              <span class="cred-item-title">SAFe® Lean Portfolio Management</span>
+              Scaled Agile Framework — enterprise Lean-Agile leadership
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-navy">S</div>
+            <div>
+              <span class="cred-item-title">SAFe® Product Owner / Product Manager (POPM)</span>
+              Delivering value through Agile Release Trains
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-teal">P</div>
+            <div>
+              <span class="cred-item-title">Radical Product Thinking: Vision Setting</span>
+              Pendo.io — product vision and strategy
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-teal">P</div>
+            <div>
+              <span class="cred-item-title">Product Discovery Certification</span>
+              Pendo.io — customer discovery and validation
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cred-block">
+        <div class="cred-title">Speaking & community</div>
+        <div class="cred-list">
+          <div class="cred-item">
+            <div class="cred-icon icon-blue">F</div>
+            <div>
+              <span class="cred-item-title">Front Conference 2023 — Speaker</span>
+              Presented on leading projects when stakeholders say no. <a href="https://lnkd.in/gncwJvU2" target="_blank" rel="noopener noreferrer" style="color: var(--teal);">Watch the talk →</a>
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-navy">A</div>
+            <div>
+              <span class="cred-item-title">Active Agile community member</span>
+              Ongoing involvement in PM and Agile practitioner communities
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-teal">W</div>
+            <div>
+              <span class="cred-item-title">PM Promotion Playbook — Author</span>
+              A hiring manager's blueprint for getting to Senior PM faster. Available on Gumroad.
+            </div>
+          </div>
+          <div class="cred-item">
+            <div class="cred-icon icon-blue">L</div>
+            <div>
+              <span class="cred-item-title">LinkedIn — Active content creator</span>
+              Regular writing on PM leadership, AI, and product strategy
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BOTTOM CTA ── -->
+  <div class="section-wrap">
+    <div class="about-cta">
+      <div class="cta-left">
+        <div class="cta-left-title">Want to work together or <em>hear me speak?</em></div>
+        <p class="cta-left-body">I'm open to executive PM roles in HealthTech, AI consulting engagements for product teams, and speaking opportunities. If you're building something that needs someone who's been in the weeds at enterprise scale — let's talk.</p>
+        <div class="btn-row">
+          <a href="/cdn-cgi/l/email-protection#d1b3a3b8b0bf91b3a3b8b0bfb2b2b9a3b8a2a5b4bfa2b4bfffb2bebc" class="btn-primary">Get in touch</a>
+          <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer" class="btn-secondary">Connect on LinkedIn</a>
+        </div>
+      </div>
+      <div class="cta-right">
+        <div class="cta-right-title">Skills & specializations</div>
+        <p class="cta-right-body">What I bring to every engagement:</p>
+        <div class="skills-pills">
+          <span class="pill-solid-teal">AI Transformation</span>
+          <span class="pill-solid-navy">HealthTech PM</span>
+          <span class="pill">Enterprise Product Leadership</span>
+          <span class="pill">Compensation Systems</span>
+          <span class="pill">Member Retention</span>
+          <span class="pill">SAFe® / Lean-Agile</span>
+          <span class="pill">Engineering Collaboration</span>
+          <span class="pill">Roadmapping</span>
+          <span class="pill">Stakeholder Alignment</span>
+          <span class="pill">Go-to-market</span>
+          <span class="pill">OKRs</span>
+          <span class="pill">Workflow Automation</span>
+          <span class="pill">SQL & Data Analysis</span>
+          <span class="pill">Cross-functional Leadership</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/#writing">Writing</a>
+      <a href="/#ai-services">AI Services</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="/cdn-cgi/l/email-protection#187a6a717976587a6a7179767b7b706a716b6c7d766b7d76367b7775">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2

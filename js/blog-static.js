@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   // Post data - generated statically
   const posts = [
+    { slug: "why-ai-is-non-negotiable-for-product-managers.html", title: "Why AI is Non-Negotiable for Product Managers", date: "April 5, 2026", category: "ai", excerpt: "AI isn't the future of product management — it's already here. After two decades leading product teams, here's what I've learned about using it effectively, responsibly, and without losing what makes great PMs irreplaceable.", readingTime: 8 },
     { slug: "importance-of-feedback.html", title: "Importance of Feedback", date: "May 8, 2021", category: "pm", excerpt: "At the end of every sprint, the team will sit down with the group of stakeholders to show them everything they have produced in the last sprint.", readingTime: 3 },
     { slug: "the-product-manager-monomyth.html", title: "The Product Manager Monomyth", date: "June 11, 2021", category: "pm", excerpt: "A few years ago I left an interview with the hiring manager telling me I was not the right fit for the job.", readingTime: 6 },
     { slug: "a-seat-at-the-table.html", title: "A Seat At The Table", date: "May 14, 2021", category: "pm", excerpt: "An idea you often hear discussed in the business world is the concept of having a seat at the table.", readingTime: 4 },

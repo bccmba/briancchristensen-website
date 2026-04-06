@@ -7,11 +7,7 @@
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://briancchristensen.com/blog/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <url><loc>https://briancchristensen.com/blog/why-ai-is-non-negotiable-for-product-managers.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
   <!-- Blog posts -->
   <url><loc>https://briancchristensen.com/blog/a-call-to-action-step-two-of-the-product-management-monomyth.html</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>

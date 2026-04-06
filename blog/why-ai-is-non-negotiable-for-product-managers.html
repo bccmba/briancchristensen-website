@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="AI isn't the future of product management — it's already here. After two decades in PM, here's what I've learned about using AI to build better products and lead better teams." />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian C. Christensen" />
+  <meta property="og:title" content="Why AI is Non-Negotiable for Product Managers" />
+  <meta property="og:description" content="AI isn't the future of product management — it's already here. After two decades in PM, here's what I've learned about using AI responsibly and effectively." />
+  <meta property="og:url" content="https://briancchristensen.com/blog/why-ai-is-non-negotiable-for-product-managers.html" />
+  <meta property="og:image" content="https://briancchristensen.com/favicon.svg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Why AI is Non-Negotiable for Product Managers" />
+  <meta name="twitter:description" content="AI isn't the future of product management — it's already here. After two decades in PM, here's what I've learned." />
+  <title>Why AI is Non-Negotiable for Product Managers — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <style>
+    .post { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+    .post-header { margin-bottom: 3rem; }
+    .post-header .post-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .post-header .post-date { font-size: 13px; color: var(--text-muted); margin-bottom: 1.25rem; display: flex; align-items: center; gap: 1rem; }
+    .post-header .post-reading-time { font-size: 12px; color: var(--text-muted); }
+    .post-header .post-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .post-header .post-title em { font-style: italic; color: var(--blue); }
+    .post-header .post-lead {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      border-left: 3px solid var(--teal);
+      padding-left: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .post-content { font-size: 17px; line-height: 1.8; color: var(--text); }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--navy);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .post-content h2 em { font-style: italic; color: var(--blue); }
+    .post-content h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin: 2rem 0 0.75rem;
+    }
+    .post-content strong { color: var(--text); font-weight: 500; }
+    .post-content ul, .post-content ol { margin: 0 0 1.5rem 1.5rem; }
+    .post-content li { margin-bottom: 0.6rem; }
+    .post-content blockquote {
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+    .post-content a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+    .post-content a:hover { color: var(--navy); }
+
+    .callout {
+      background: var(--bg-soft);
+      border-left: 3px solid var(--navy);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .callout-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .callout p {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 0 !important;
+      line-height: 1.65;
+    }
+
+    .section-divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 3rem 0;
+    }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .back-link {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .post-tag {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: var(--bg-soft);
+      color: var(--text-muted);
+      border: 0.5px solid var(--border);
+    }
+
+    .related-cta {
+      background: var(--bg-soft);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .related-cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .related-cta-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .related-cta-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .cta-btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/#writing">Writing</a></li>
+        <li><a href="/#ai-services">AI Services</a></li>
+        <li><a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="post">
+    <header class="post-header">
+      <span class="post-eyebrow">AI · Product Management</span>
+      <div class="post-date">
+        <span>April 5, 2026</span>
+        <span class="post-reading-time">8 min read</span>
+      </div>
+      <h1 class="post-title">Why AI is <em>Non-Negotiable</em><br>for Product Managers</h1>
+      <p class="post-lead">AI isn't the future of product management — it's already here. After two decades leading product teams, here's what I've learned about using it effectively, responsibly, and without losing what makes great PMs irreplaceable.</p>
+    </header>
+
+    <div class="post-content">
+
+      <p>When I first stepped into product management, "AI" felt like something reserved for data scientists and engineers. My job was requirements, strategy, roadmaps. AI was someone else's lane.</p>
+
+      <p>That was a mistake I see a lot of PMs still making today.</p>
+
+      <p>Over the past few years — and especially as I've been leading an org-wide AI initiative at enterprise scale — my view has shifted completely. <strong>AI is no longer optional for product managers. It's essential.</strong> Those who learn and apply it will move forward. Those who don't risk being left behind.</p>
+
+      <p>But here's the nuance most posts skip: knowing <em>that</em> you should use AI isn't the same as knowing <em>how</em> to use it well. And using it recklessly is its own kind of problem.</p>
+
+      <p>Let me share what I've actually learned.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>AI is a decision-making <em>accelerator</em> — not a decision maker</h2>
+
+      <p>The biggest misunderstanding I see is treating AI like it has judgment. It doesn't. It's extraordinarily good at surfacing patterns, generating options, drafting first passes, and processing information at a scale no human can match. But it cannot sense when a story doesn't add up. It cannot weigh the ethical implications of a feature decision. It cannot replace the conversation you need to have with a real customer.</p>
+
+      <p>Early in my career, I thought I could solve problems by talking more, knowing more, doing more. A mentor eventually told me I needed to listen better — not just hear, but understand. AI is like that in reverse: it can produce a lot of output, but the value entirely depends on the quality of judgment you bring to it.</p>
+
+      <blockquote>"AI is a partner, not a replacement. It won't write the strategy for you, but it can surface insights faster than any spreadsheet ever could."</blockquote>
+
+      <p>The most valuable skill in product management right now isn't knowing every AI tool. It's judgment — the ability to ask better questions, weigh tradeoffs, and understand nuance. AI makes judgment more powerful. It doesn't replace it.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>5 practical ways I use AI in my day-to-day</h2>
+
+      <p>Theory is fine. Here's what actually moves the needle:</p>
+
+      <h3>1. Customer feedback analysis at scale</h3>
+      <p>I used to manually read through survey responses, support tickets, and NPS comments. It took hours and I still missed things. Now AI tools cluster themes, summarize sentiment, and flag anomalies in minutes. I walk into meetings with insights already in hand — then validate the most important ones with real customer conversations. AI accelerates the discovery; the conversations still drive the decisions.</p>
+
+      <h3>2. Faster product documentation</h3>
+      <p>Writing PRDs, user stories, and release notes used to feel like a grind. AI generates first drafts that I refine rather than creating from scratch. The cognitive load drops significantly. Instead of staring at a blank page, I'm editing — which is faster and produces better output because I'm reacting rather than generating cold.</p>
+
+      <h3>3. Meeting summaries and action items</h3>
+      <p>I stopped being the note-taker. AI tools transcribe meetings, identify action items, and surface follow-ups automatically. That's time back in every single day — time I redirect toward strategy, customer conversations, and the decisions that actually require a human being.</p>
+
+      <h3>4. Market and competitive research</h3>
+      <p>What once took weeks now takes hours. AI-powered tools can scan competitor updates, synthesize reviews, and surface industry signals. I still validate everything important. But the first pass — the orientation — happens in a fraction of the time it used to.</p>
+
+      <h3>5. Roadmap stress-testing</h3>
+      <p>Every roadmap is built on assumptions. AI can model scenarios — how a pricing change might impact churn, how a new feature could influence cohort behavior. It won't give you perfect answers, but it helps surface risks you might not have considered and forces clearer thinking about the "what ifs" before they become surprises.</p>
+
+      <div class="callout">
+        <div class="callout-label">Key insight</div>
+        <p>You don't need to master AI to start using it. Start where the payoff is clearest and the risk is lowest. Small wins build momentum — and momentum builds capability.</p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <h2>The Jurassic Park problem: <em>can we</em> vs. <em>should we</em></h2>
+
+      <p>Last year I was rewatching Jurassic Park with my kids. That movie still hits hard — and one line from Dr. Ian Malcolm stopped me cold:</p>
+
+      <blockquote>"Your scientists were so preoccupied with whether or not they could, they didn't stop to think if they should."</blockquote>
+
+      <p>Swap "scientists" for "product leaders" and "AI strategists" and the quote is the same.</p>
+
+      <p>We're in the biggest technology gold rush since the internet boom. Companies are sprinting to ship AI features, announce AI roadmaps, and slap "powered by AI" on everything — not because it meaningfully improves the customer experience, but because everyone else is doing it and no one wants to be left behind.</p>
+
+      <p>As product managers, we are the last line of defense. Our job isn't just to ask "Can we build this with AI?" Our job is to have the courage to ask "Should we?"</p>
+
+      <ul>
+        <li>Does this actually solve a real customer problem better than the non-AI alternative?</li>
+        <li>Are we adding complexity that will cost us in 18 months?</li>
+        <li>Are we being honest about the accuracy, bias, cost, and ethical risks?</li>
+        <li>Or are we just checking the "We have AI" box?</li>
+      </ul>
+
+      <p><strong>AI isn't the problem. Thoughtless AI is.</strong></p>
+
+      <p>The companies that win the next decade aren't the ones that moved fastest to ship the most AI features. They'll be the ones that moved deliberately, shipped fewer but truly impactful AI experiences, and never lost sight of why we build products: to make people's lives or work materially better.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>5 AI mistakes I see PMs make</h2>
+
+      <p>Knowing what not to do is as important as knowing where to start:</p>
+
+      <ol>
+        <li><strong>Treating AI as the decision maker instead of the decision aid.</strong> AI produces options. You make the call.</li>
+        <li><strong>Using AI for strategy before execution.</strong> Get the fundamentals right first. Automate what's proven, not what's still being figured out.</li>
+        <li><strong>Skipping validation with real customers.</strong> AI can analyze feedback at scale. It cannot replace the conversation. Never let it.</li>
+        <li><strong>Overcomplicating AI workflows too early.</strong> Start with one use case. Prove the value. Then expand.</li>
+        <li><strong>Believing AI saves time without changing how you work.</strong> It does save time — but only if you redirect that time toward higher-leverage work. If you just fill the gap with more low-value tasks, you haven't gained anything.</li>
+      </ol>
+
+      <div class="section-divider"></div>
+
+      <h2>Building AI-ready habits as a PM</h2>
+
+      <p>If you're starting today, here are the habits I wish I'd built earlier:</p>
+
+      <ul>
+        <li><strong>Treat AI like a capable teammate.</strong> Delegate to it, but always review the output. You're accountable for what goes out.</li>
+        <li><strong>Master prompting.</strong> Better questions produce better answers. This is true of AI and of every stakeholder conversation you'll ever have. The RACE framework (Role, Action, Context, Execute) has made my ChatGPT interactions significantly more useful.</li>
+        <li><strong>Validate with customers.</strong> Never use AI insights to replace real conversations. Use them to focus those conversations on the right questions.</li>
+        <li><strong>Keep experimenting.</strong> Try one new AI use case per month. Most won't stick. Some will transform how you work.</li>
+        <li><strong>Stay the filter.</strong> Bias, overconfidence, and lack of context are real risks. Always ask: does this align with customer truth? Would I stand behind this without the AI output?</li>
+      </ul>
+
+      <div class="section-divider"></div>
+
+      <p>The future of product isn't human vs. machine. It's human + machine. Those who master the balance — who use AI to amplify their judgment rather than replace it — will build the most impactful products of the next decade.</p>
+
+      <p>AI won't replace product managers. But PMs who use AI effectively will replace those who don't.</p>
+
+      <p>The question isn't whether to start. It's whether you're going to be intentional about how.</p>
+
+    </div>
+
+    <div class="related-cta">
+      <div class="related-cta-eyebrow">Leading AI transformation</div>
+      <div class="related-cta-title">I'm doing this at enterprise scale right now</div>
+      <p class="related-cta-body">I'm currently leading an org-wide AI initiative across product and engineering teams — with a goal of 10× team output and early results already confirmed. If you're serious about AI adoption in your product org, let's talk.</p>
+      <div class="cta-btn-row">
+        <a href="/#contact" class="btn-primary">Get in touch</a>
+        <a href="/about.html" class="btn-secondary">Learn more about my work</a>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog/" class="back-link">← Back to all posts</a>
+      <div class="post-tags">
+        <span class="post-tag">AI</span>
+        <span class="post-tag">Product Management</span>
+        <span class="post-tag">Leadership</span>
+        <span class="post-tag">HealthTech</span>
+      </div>
+    </footer>
+  </article>
+
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/#writing">Writing</a>
+      <a href="/#ai-services">AI Services</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+</body>
+</html>

@@ -33,7 +33,7 @@
   "url": "https://briancchristensen.com",
   "sameAs": [
     "https://www.linkedin.com/in/briancchristensen",
-    "https://briancchristensen.gumroad.com"
+    "https://brianchris.gumroad.com/l/pm_promotion_playbook"
   ],
   "knowsAbout": [
     "Product Management",
@@ -61,7 +61,7 @@
         <li><a href="/about.html">About</a></li>
         <li><a href="#writing">Writing</a></li>
         <li><a href="#ai-services">AI Services</a></li>
-        <li><a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
+        <li><a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
         <li><a href="#contact" class="nav-cta">Let's talk</a></li>
       </ul>
     </div>
@@ -81,11 +81,11 @@
       </p>
       <div class="btn-row animate-4">
         <a href="#work" class="btn-primary">See my work</a>
-        <a href="https://briancchristensen.gumroad.com" target="_blank" rel="noopener noreferrer" class="btn-secondary">PM Promotion Playbook</a>
+        <a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank" rel="noopener noreferrer" class="btn-secondary">PM Promotion Playbook</a>
       </div>
     </div>
     <div class="hero-right animate-5">
-      <div class="hero-headshot">BC</div>
+      <img src="/images/headshot.jpg" alt="Brian C. Christensen — Executive Product Manager" class="hero-headshot" />
       <div class="stats">
         <div class="stat">
           <div class="stat-number">10×</div>
@@ -269,6 +269,10 @@
           </div>
           <button type="submit" class="form-submit">Send Message</button>
         </form>
+        <div class="form-success" id="formSuccess" style="display:none;">
+          <p class="form-success-title">Message sent!</p>
+          <p class="form-success-body">Thanks for reaching out — I'll get back to you within 1-2 business days.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -281,13 +285,20 @@
       <a href="/about.html">About</a>
       <a href="#writing">Writing</a>
       <a href="#ai-services">AI Services</a>
-      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:brian@briancchristensen.com">Email</a>
     </div>
     <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
   </footer>
 
   <script src="js/main.js"></script>
+  <script>
+    if (window.location.search.includes('sent=true')) {
+      document.getElementById('formSuccess').style.display = 'block';
+      document.querySelector('.contact-form').style.display = 'none';
+      document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 
 </body>
 </html>

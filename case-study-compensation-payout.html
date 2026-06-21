@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="How Brian C. Christensen cut enterprise compensation payout processing from 4–5 hours to under 1 hour — a 75% reduction across a 5,000+ employee organization." />
+  <link rel="canonical" href="https://briancchristensen.com/case-study-compensation-payout.html" />
+  <meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian C. Christensen" />
+  <meta property="og:title" content="Case Study: 75% Faster Enterprise Compensation Payouts" />
+  <meta property="og:description" content="How I led a product initiative that cut payout processing from 4–5 hours to under 1 hour across a 5,000+ employee enterprise." />
+  <meta property="og:url" content="https://briancchristensen.com/case-study-compensation-payout.html" />
+  <meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Case Study: 75% Faster Enterprise Compensation Payouts" />
+  <meta name="twitter:description" content="How I cut payout processing from 4–5 hours to under 1 hour across a 5,000+ employee enterprise." />
+  <title>75% Faster Compensation Payouts — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <style>
+    .cs-hero {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      border-bottom: 0.5px solid var(--border);
+      min-height: 380px;
+    }
+    .cs-hero-left {
+      padding: 4rem 3rem 4rem 2rem;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .cs-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+    .cs-title {
+      font-family: var(--font-serif);
+      font-size: clamp(32px, 4vw, 46px);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--navy);
+      letter-spacing: -1.5px;
+      margin-bottom: 1.25rem;
+    }
+    .cs-title em { font-style: italic; color: var(--blue); }
+    .cs-lead {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 420px;
+      margin-bottom: 1.75rem;
+    }
+    .cs-lead strong { color: var(--text); font-weight: 500; }
+    .cs-meta {
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .cs-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+    .cs-meta-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+    .cs-meta-value {
+      font-size: 13px;
+      color: var(--text);
+      font-weight: 500;
+    }
+
+    .cs-hero-right {
+      padding: 4rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .cs-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-left: 1rem;
+      border-left: 2.5px solid var(--teal);
+    }
+    .cs-stat.blue { border-left-color: var(--blue); }
+    .cs-stat.navy { border-left-color: var(--navy); }
+    .cs-stat-n {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -1.5px;
+    }
+    .cs-stat-l {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .ticker {
+      background: var(--navy);
+      padding: 11px 0;
+      border-bottom: 0.5px solid var(--border);
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 4rem;
+      white-space: nowrap;
+      animation: ticker 25s linear infinite;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-item { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .ticker-item span { color: #5DCAA5; font-weight: 500; margin-right: 6px; }
+
+    .section-wrap { border-bottom: 0.5px solid var(--border); }
+    .sec-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      padding: 1.25rem 2rem 1rem;
+      border-bottom: 0.5px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    .cs-body {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cs-two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .cs-col {
+      padding: 2.5rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .cs-col:last-child { border-right: none; }
+    .cs-col-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cs-col-title em { font-style: italic; color: var(--blue); }
+    .cs-col-body {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text-muted);
+    }
+    .cs-col-body p { margin-bottom: 1rem; }
+    .cs-col-body p:last-child { margin-bottom: 0; }
+    .cs-col-body strong { color: var(--text); font-weight: 500; }
+    .cs-col-body ul { margin: 0.75rem 0 1rem 1.25rem; }
+    .cs-col-body li { margin-bottom: 0.5rem; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+    .cs-full {
+      padding: 2.5rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cs-full-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+    .cs-full-title em { font-style: italic; color: var(--blue); }
+    .cs-full-body {
+      font-size: 14px;
+      line-height: 1.85;
+      color: var(--text-muted);
+      max-width: 720px;
+    }
+    .cs-full-body p { margin-bottom: 1rem; }
+    .cs-full-body p:last-child { margin-bottom: 0; }
+    .cs-full-body strong { color: var(--text); font-weight: 500; }
+
+    .cs-process {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+    .cs-step {
+      padding: 2rem 1.75rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .cs-step:last-child { border-right: none; }
+    .cs-step-n {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--navy);
+      opacity: 0.1;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -2px;
+    }
+    .cs-step-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 0.6rem;
+    }
+    .cs-step-body {
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    .cs-results {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    .cs-result {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+      transition: background 0.2s;
+    }
+    .cs-result:last-child { border-right: none; }
+    .cs-result:hover { background: var(--bg-soft); }
+    .cs-result-dot {
+      width: 10px; height: 10px; border-radius: 50%;
+      margin-bottom: 1.25rem;
+    }
+    .dot-teal { background: var(--teal); }
+    .dot-blue { background: var(--blue); }
+    .dot-navy { background: var(--navy); }
+    .cs-result-n {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 600;
+      color: var(--navy);
+      letter-spacing: -1.5px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .cs-result-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+    .cs-result-body {
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+    .cs-badge {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 11px;
+      border-radius: 99px;
+    }
+    .badge-teal { background: var(--teal-light); color: var(--teal-dark); }
+    .badge-blue { background: var(--blue-light); color: var(--blue-dark); }
+    .badge-navy { background: var(--navy-light); color: var(--navy); }
+
+    .testimonial {
+      padding: 2.5rem 2rem;
+      display: grid;
+      grid-template-columns: 3px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .t-bar { background: var(--teal); border-radius: 99px; align-self: stretch; }
+    .t-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+    .t-attr { font-size: 13px; color: var(--text-muted); }
+    .t-attr strong { color: var(--text); font-weight: 500; }
+
+    .cs-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .cs-cta-left {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .cs-cta-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.3;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .cs-cta-title em { font-style: italic; color: var(--blue); }
+    .cs-cta-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+    .cs-cta-right {
+      padding: 2.25rem 2rem 2.25rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+    .cs-other-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.25rem;
+    }
+    .cs-other-links {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .cs-other-link {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      padding: 0.75rem 1rem;
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      background: white;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .cs-other-link:hover {
+      border-color: var(--teal);
+      background: var(--teal-light);
+    }
+    .cs-other-link-label {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .cs-other-link-title {
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--navy);
+    }
+    .cs-other-link-result {
+      font-size: 11px;
+      color: var(--text-muted);
+    }
+
+    .btn-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    @media (max-width: 768px) {
+      .cs-hero { grid-template-columns: 1fr; }
+      .cs-hero-left { padding: 3rem 1.5rem 2rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cs-hero-right { padding: 2rem 1.5rem; }
+      .cs-two-col { grid-template-columns: 1fr; }
+      .cs-col { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cs-col:last-child { border-bottom: none; }
+      .cs-process { grid-template-columns: 1fr 1fr; }
+      .cs-step { border-bottom: 0.5px solid var(--border); }
+      .cs-results { grid-template-columns: 1fr; }
+      .cs-result { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cs-result:last-child { border-bottom: none; }
+      .cs-cta { grid-template-columns: 1fr; }
+      .cs-cta-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .cs-cta-right { padding: 2rem 1.5rem; }
+      .sec-label { padding: 1.25rem 1.5rem 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="cs-hero">
+    <div class="cs-hero-left">
+      <p class="cs-eyebrow">Case Study · HealthTech · Enterprise Operations</p>
+      <h1 class="cs-title">Cutting compensation<br>payout time by <em>75%</em><br>at enterprise scale.</h1>
+      <p class="cs-lead">
+        A recurring operational bottleneck was consuming entire half-days across finance and HR every pay cycle — at a <strong>5,000+ employee enterprise</strong>. I led the product initiative to redesign the payout flow end-to-end, cutting processing time from 4–5 hours to under 1 hour with zero increase in headcount.
+      </p>
+      <div class="cs-meta">
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Industry</span>
+          <span class="cs-meta-value">HealthTech</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Scale</span>
+          <span class="cs-meta-value">5,000+ employees</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">My role</span>
+          <span class="cs-meta-value">Product Lead</span>
+        </div>
+        <div class="cs-meta-item">
+          <span class="cs-meta-label">Domain</span>
+          <span class="cs-meta-value">Compensation Systems</span>
+        </div>
+      </div>
+    </div>
+    <div class="cs-hero-right">
+      <div class="cs-stat">
+        <span class="cs-stat-n">75%</span>
+        <span class="cs-stat-l">Reduction in payout processing time — 4–5 hours down to under 1 hour</span>
+      </div>
+      <div class="cs-stat blue">
+        <span class="cs-stat-n">5,000+</span>
+        <span class="cs-stat-l">Employees impacted every single pay cycle across the enterprise</span>
+      </div>
+      <div class="cs-stat navy">
+        <span class="cs-stat-n">Zero</span>
+        <span class="cs-stat-l">Additional headcount required to achieve the improvement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>Result</span>75% processing time reduction</span>
+      <span class="ticker-item"><span>Scale</span>5,000+ employees · Every pay cycle</span>
+      <span class="ticker-item"><span>Domain</span>HealthTech · Compensation Systems</span>
+      <span class="ticker-item"><span>Outcome</span>Zero additional headcount</span>
+      <span class="ticker-item"><span>Type</span>Enterprise product initiative</span>
+      <span class="ticker-item"><span>Result</span>75% processing time reduction</span>
+      <span class="ticker-item"><span>Scale</span>5,000+ employees · Every pay cycle</span>
+      <span class="ticker-item"><span>Domain</span>HealthTech · Compensation Systems</span>
+      <span class="ticker-item"><span>Outcome</span>Zero additional headcount</span>
+      <span class="ticker-item"><span>Type</span>Enterprise product initiative</span>
+    </div>
+  </div>
+
+  <!-- ── THE PROBLEM ── -->
+  <div class="section-wrap">
+    <div class="sec-label">The problem</div>
+    <div class="cs-two-col cs-body">
+      <div class="cs-col">
+        <h2 class="cs-col-title">Every pay cycle was a <em>half-day firefight.</em></h2>
+        <div class="cs-col-body">
+          <p>In a 5,000+ employee enterprise, compensation payouts aren't just a finance function — they're a trust function. Employees expect accuracy. They expect consistency. When the process is broken, they feel it.</p>
+          <p>The existing payout process required 4–5 hours of manual coordination across finance and HR every single pay cycle. Teams were working through complex commission structures, rank qualifications, and payout rules across multiple markets — all with significant manual intervention at each step.</p>
+          <p>This wasn't just inefficient. It was a systemic risk. Manual processes at scale mean errors. Errors in compensation mean eroded trust. And in a business where distributor and employee relationships are everything, that trust is extraordinarily hard to rebuild.</p>
+        </div>
+      </div>
+      <div class="cs-col">
+        <h2 class="cs-col-title">Why it hadn't <em>been solved already.</em></h2>
+        <div class="cs-col-body">
+          <p>The compensation system had grown organically over many years — each rule, qualification tier, and market variation added one at a time. No single person had a complete picture of how it all connected. Finance understood the outputs. Compliance understood the rules. Engineering understood the data model. Nobody owned the whole flow.</p>
+          <p>Previous attempts to improve the process had stalled because they tried to solve individual symptoms rather than redesigning the underlying product experience. The real problem wasn't any single step — it was the accumulated friction across all of them.</p>
+          <p>What was needed was a product leader who could sit with stakeholders from every function — finance, compliance, HR, engineering, sales operations — map the entire end-to-end flow, and drive a coordinated redesign.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── MY APPROACH ── -->
+  <div class="section-wrap">
+    <div class="sec-label">My approach</div>
+    <div class="cs-full cs-body">
+      <h2 class="cs-full-title">Start with the system, <em>not the symptoms.</em></h2>
+      <div class="cs-full-body">
+        <p>I came into this initiative with a background in reporting and analytics — I understood how data flowed through compensation systems in a way most PMs don't. That technical fluency meant I could have substantive conversations with engineering while simultaneously speaking the language of finance and compliance.</p>
+        <p>The first thing I did was map the complete payout flow end-to-end. Not just the happy path — every exception, every manual intervention, every place where someone had to stop and make a judgment call. This mapping process itself surfaced insights that had never been documented: several bottlenecks existed not because the logic was wrong, but because the product had never been designed to surface the right information at the right moment.</p>
+        <p>From there, the approach was deliberate: prioritize changes that eliminated manual steps for the highest-frequency scenarios first, validate with the teams who lived in the process daily, and ship incrementally rather than attempting a big-bang redesign that would never survive contact with production.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── PROCESS STEPS ── -->
+  <div class="section-wrap">
+    <div class="sec-label">How we got there</div>
+    <div class="cs-process cs-body">
+      <div class="cs-step">
+        <div class="cs-step-n">01</div>
+        <div class="cs-step-title">Map the full flow</div>
+        <p class="cs-step-body">Sat with finance, HR, compliance, and engineering to document every step, decision point, and manual intervention in the existing payout process. Identified where time was actually being lost.</p>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-n">02</div>
+        <div class="cs-step-title">Identify the highest-leverage changes</div>
+        <p class="cs-step-body">Ranked improvements by frequency and time impact. Focused first on the bottlenecks that occurred every cycle, not the edge cases. Aligned stakeholders around a shared prioritization.</p>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-n">03</div>
+        <div class="cs-step-title">Redesign the product experience</div>
+        <p class="cs-step-body">Led cross-functional work to redesign the payout flow — surfacing the right data at the right moment, eliminating unnecessary manual checkpoints, and building in validation that caught errors before they required human intervention.</p>
+      </div>
+      <div class="cs-step">
+        <div class="cs-step-n">04</div>
+        <div class="cs-step-title">Ship, measure, iterate</div>
+        <p class="cs-step-body">Released incrementally. Measured processing time at each pay cycle. Validated with the finance and HR teams who ran the process. Iterated based on what they experienced in production, not just what we assumed in planning.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── RESULTS ── -->
+  <div class="section-wrap">
+    <div class="sec-label">The results</div>
+    <div class="cs-results cs-body">
+      <div class="cs-result">
+        <div class="cs-result-dot dot-teal"></div>
+        <div class="cs-result-n">75%</div>
+        <div class="cs-result-title">Faster payout processing</div>
+        <p class="cs-result-body">Processing time dropped from 4–5 hours to under 1 hour per pay cycle — a 75% reduction that compounded across every pay period going forward.</p>
+        <span class="cs-badge badge-teal">Operational efficiency</span>
+      </div>
+      <div class="cs-result">
+        <div class="cs-result-dot dot-blue"></div>
+        <div class="cs-result-n">5,000+</div>
+        <div class="cs-result-title">Employees impacted</div>
+        <p class="cs-result-body">Every employee in the organization benefited from a more reliable, accurate, and consistent payout process — directly improving the compensation experience at scale.</p>
+        <span class="cs-badge badge-blue">Enterprise scale</span>
+      </div>
+      <div class="cs-result">
+        <div class="cs-result-dot dot-navy"></div>
+        <div class="cs-result-n">Zero</div>
+        <div class="cs-result-title">Additional headcount</div>
+        <p class="cs-result-body">The improvement was achieved entirely through product redesign — no new hires, no additional tooling costs. Pure efficiency from better product thinking.</p>
+        <span class="cs-badge badge-teal">No added cost</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHAT I LEARNED ── -->
+  <div class="section-wrap">
+    <div class="sec-label">What I learned</div>
+    <div class="cs-two-col cs-body">
+      <div class="cs-col">
+        <h2 class="cs-col-title">Technical fluency isn't optional<br><em>at enterprise scale.</em></h2>
+        <div class="cs-col-body">
+          <p>This project wouldn't have moved as fast without the ability to sit alongside engineers and understand what was genuinely hard versus what just hadn't been prioritized. Technical fluency didn't mean writing code — it meant understanding the data model well enough to know which changes were one-sprint fixes and which required architectural decisions.</p>
+          <p>PMs who treat engineering as a black box hand-off miss half the leverage available to them. The ability to navigate the "how" makes you dramatically more effective at driving the "what."</p>
+        </div>
+      </div>
+      <div class="cs-col">
+        <h2 class="cs-col-title">Map the whole system<br><em>before touching anything.</em></h2>
+        <div class="cs-col-body">
+          <p>The most important thing I did on this project wasn't a feature decision — it was the process mapping session that happened before any feature decisions. Understanding the complete flow, with all its exceptions and manual interventions, meant we solved the right problems rather than the most visible ones.</p>
+          <p>In complex operational systems, the bottleneck is almost never where you first think it is. The time investment in mapping always pays back.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TESTIMONIAL ── -->
+  <div class="section-wrap">
+    <div class="testimonial">
+      <div class="t-bar"></div>
+      <div>
+        <p class="t-quote">"Working with Brian Christensen was fantastic. He has great expertise as well as profound understanding of business solutions. A passionate, experienced, and responsible product leader — result driven, experienced and efficient. Deliver results and move on, that's Brian's way."</p>
+        <p class="t-attr"><strong>Mike Maurin</strong> · Product Owner, Nu Skin · Cross-team collaborator at USANA</p>
+      </div>
+    </div>
+    <div class="testimonial" style="border-top: 0.5px solid var(--border);">
+      <div class="t-bar"></div>
+      <div>
+        <p class="t-quote">"Brian's strategic vision helps him achieve long-term benefits while steering operational project activities. Aside from his dedication and professionalism, Brian is a brilliant team player with a great non-assertive leadership style — able to balance any team dynamic and keep the team united even in times of hardship."</p>
+        <p class="t-attr"><strong>Iliya Chalamov</strong> · Senior Product Manager · Colleague at USANA</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── CTA ── -->
+  <div class="section-wrap">
+    <div class="cs-cta cs-body">
+      <div class="cs-cta-left">
+        <div class="cs-cta-title">Working on a complex operational<br>or compensation challenge?</div>
+        <p class="cs-cta-body">I specialize in HealthTech product problems that sit at the intersection of technical complexity and business impact — the kind where getting it right matters as much as getting it done. Let's talk about what you're working on.</p>
+        <div class="btn-row">
+          <a href="/#contact" class="btn-primary">Get in touch</a>
+          <a href="/about.html" class="btn-secondary">About Brian</a>
+        </div>
+      </div>
+      <div class="cs-cta-right">
+        <div class="cs-other-title">Other case studies</div>
+        <div class="cs-other-links">
+          <a href="/case-study-retention-lift.html" class="cs-other-link">
+            <span class="cs-other-link-label">Member Retention · HealthTech</span>
+            <span class="cs-other-link-title">47% member retention lift through compensation redesign</span>
+            <span class="cs-other-link-result">47% retention lift · Distributor field reps</span>
+          </a>
+          <a href="#" class="cs-other-link">
+            <span class="cs-other-link-label">AI Transformation · Org-wide</span>
+            <span class="cs-other-link-title">Leading the initiative to do 10× the work with AI</span>
+            <span class="cs-other-link-result">Coming soon</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+  <script src="/js/analytics-events.js" defer></script>
+
+<a href="/pm-level/" class="playbook-float" aria-label="Take the PM Level Assessment">📊 Free PM Level Quiz</a>
+
+</body>
+</html>

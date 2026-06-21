@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="After 20 years in product management, the single biggest mindset shift I've seen separate great PMs from good ones is the move from outputs to outcomes. Here's what that actually means in practice." />
+  <link rel="canonical" href="https://briancchristensen.com/blog/stop-measuring-outputs-start-delivering-outcomes.html" />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian C. Christensen" />
+  <meta property="og:title" content="Stop Measuring Outputs. Start Delivering Outcomes." />
+  <meta property="og:description" content="After 20 years in product management, the single biggest mindset shift separating great PMs from good ones is moving from outputs to outcomes. Here's what that actually means." />
+  <meta property="og:url" content="https://briancchristensen.com/blog/stop-measuring-outputs-start-delivering-outcomes.html" />
+  <meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Stop Measuring Outputs. Start Delivering Outcomes." />
+  <meta name="twitter:description" content="The single biggest mindset shift separating great PMs from good ones — and how to make it." />
+  <meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <title>Stop Measuring Outputs. Start Delivering Outcomes. — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <style>
+    .post { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+    .post-header { margin-bottom: 3rem; }
+    .post-header .post-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .post-header .post-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .post-header .post-reading-time { font-size: 12px; color: var(--text-muted); }
+    .post-header .post-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 1.25rem;
+    }
+    .post-header .post-title em { font-style: italic; color: var(--blue); }
+    .post-header .post-lead {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      border-left: 3px solid var(--teal);
+      padding-left: 1.25rem;
+      margin-top: 1.5rem;
+    }
+    .post-content { font-size: 17px; line-height: 1.8; color: var(--text); }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--navy);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .post-content h2 em { font-style: italic; color: var(--blue); }
+    .post-content h3 {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--navy);
+      margin: 2rem 0 0.75rem;
+    }
+    .post-content strong { color: var(--text); font-weight: 500; }
+    .post-content ul, .post-content ol { margin: 0 0 1.5rem 1.5rem; }
+    .post-content li { margin-bottom: 0.6rem; }
+    .post-content blockquote {
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+    .post-content a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+    .post-content a:hover { color: var(--navy); }
+    .callout {
+      background: var(--bg-soft);
+      border-left: 3px solid var(--navy);
+      padding: 1.25rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .callout-label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--navy);
+      font-weight: 500;
+      margin-bottom: 0.5rem;
+    }
+    .callout p {
+      font-size: 15px;
+      color: var(--text);
+      margin-bottom: 0 !important;
+      line-height: 1.65;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      font-size: 15px;
+    }
+    .comparison-table th {
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: 14px;
+      padding: 0.75rem 1rem;
+      text-align: left;
+      border-bottom: 2px solid var(--border);
+    }
+    .comparison-table th:first-child { color: var(--text-muted); }
+    .comparison-table th:last-child { color: var(--navy); }
+    .comparison-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 0.5px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .comparison-table td:first-child {
+      color: var(--text-muted);
+      font-size: 14px;
+    }
+    .comparison-table td:last-child {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .section-divider {
+      height: 0.5px;
+      background: var(--border);
+      margin: 3rem 0;
+    }
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .back-link {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .post-tag {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: var(--bg-soft);
+      color: var(--text-muted);
+      border: 0.5px solid var(--border);
+    }
+    .related-cta {
+      background: var(--bg-soft);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .related-cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .related-cta-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .related-cta-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .cta-btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .related-posts {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .related-posts-title {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .related-posts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    .related-post-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 1rem 1.25rem;
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .related-post-link:hover { border-color: var(--teal); background: var(--bg-soft); }
+    .related-post-cat {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .related-post-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      line-height: 1.35;
+    }
+    @media (max-width: 600px) {
+      .post { padding: 2.5rem 1.25rem; }
+      .related-posts-grid { grid-template-columns: 1fr; }
+      .comparison-table { font-size: 13px; }
+      .comparison-table th, .comparison-table td { padding: 0.6rem 0.75rem; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Stop Measuring Outputs. Start Delivering Outcomes.",
+    "description": "After 20 years in product management, the single biggest mindset shift separating great PMs from good ones is moving from outputs to outcomes. Here's what that actually means in practice.",
+    "datePublished": "2026-04-17",
+    "dateModified": "2026-04-17",
+    "author": {
+      "@type": "Person",
+      "name": "Brian C. Christensen",
+      "url": "https://briancchristensen.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Brian C. Christensen",
+      "url": "https://briancchristensen.com"
+    },
+    "url": "https://briancchristensen.com/blog/stop-measuring-outputs-start-delivering-outcomes.html",
+    "mainEntityOfPage": "https://briancchristensen.com/blog/stop-measuring-outputs-start-delivering-outcomes.html",
+    "keywords": ["product management", "outcomes", "outputs", "OKRs", "product strategy", "PM career", "senior product manager"]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#work">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="post">
+
+    <header class="post-header">
+      <span class="post-eyebrow">Product Management · Strategy · Leadership</span>
+      <div class="post-date">
+        <span>April 17, 2026</span>
+        <span class="post-reading-time">9 min read</span>
+      </div>
+      <h1 class="post-title">Stop Measuring Outputs.<br><em>Start Delivering Outcomes.</em></h1>
+      <p class="post-lead">After 20 years in product management, the single biggest mindset shift I've seen separate great PMs from good ones isn't technical skill, agile certification, or stakeholder management. It's the move from outputs to outcomes — and most teams are still getting it wrong.</p>
+    </header>
+
+    <div class="post-content">
+
+      <p>Early in my career I thought a good sprint was one where we shipped everything on the list. We closed every ticket, demoed every feature, and hit every deadline. The team celebrated. Leadership applauded. I felt like we were winning.</p>
+
+      <p>Then the data would come back three weeks later. Engagement flat. Retention unchanged. The feature nobody was using. And I'd wonder — what exactly did we accomplish?</p>
+
+      <p>That was the moment I started understanding the difference between an output and an outcome. It took a few more painful cycles before I really internalized it. And it took years before I figured out how to actually build a team culture around outcomes rather than just talking about them.</p>
+
+      <p>Here's what I've learned.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>What's the actual difference?</h2>
+
+      <p>An output is something your team produces. A feature. A release. A document. A sprint's worth of tickets marked "Done." Outputs are visible, countable, and easy to report on. They're what fills up a roadmap and makes a stakeholder presentation feel productive.</p>
+
+      <p>An outcome is a change in behavior, business metric, or user experience that the output was supposed to cause. Retention improved. Activation rate up. Support tickets down. Revenue grew. Customer satisfaction moved. Outcomes are the reason you built the thing in the first place.</p>
+
+      <blockquote>"Shipping is not the goal. Shipping is how you pursue the goal."</blockquote>
+
+      <p>The trap is that outputs are easy to measure and outcomes are harder. So teams default to measuring what's easy — and then, over time, start optimizing for it. Velocity becomes the proxy for value. Story points become the unit of success. The roadmap becomes a shipping list rather than a hypothesis list.</p>
+
+      <p>And slowly, quietly, the team stops asking whether what they're building is actually working.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>Why this happens — even on good teams</h2>
+
+      <p>Output thinking isn't a character flaw. It's a structural problem. Here's why it persists even on teams that know better:</p>
+
+      <h3>Stakeholders reward shipping</h3>
+      <p>In most organizations, the visible moment of celebration is the release. Leadership gets excited, marketing sends the announcement, and the PM gets credit for "delivering." The quiet months after — where the actual behavior change either happens or doesn't — rarely have the same audience. If you're measured and rewarded on what ships, you'll focus on what ships.</p>
+
+      <h3>Outcomes take longer to appear</h3>
+      <p>A feature ships in two weeks. The downstream metric impact might take 60 days to show up clearly in the data. Quarterly planning cycles and sprint reviews create pressure to show something now — and outcomes rarely cooperate with those timelines.</p>
+
+      <h3>Attribution is genuinely hard</h3>
+      <p>Did retention improve because of the new onboarding flow you shipped, or because of the email campaign that ran at the same time, or because a competitor had a bad quarter? Real outcomes are messy. Outputs are clean. And teams under pressure tend to gravitate toward what's clean.</p>
+
+      <div class="callout">
+        <div class="callout-label">The uncomfortable truth</div>
+        <p>A team can have a perfect sprint — everything shipped on time, zero bugs, stakeholders thrilled — and still have delivered zero value. Outputs without outcomes are just expensive activity.</p>
+      </div>
+
+      <div class="section-divider"></div>
+
+      <h2>What it looks like in practice</h2>
+
+      <p>The difference between output thinking and outcome thinking shows up in how your team talks about work. Here are the real conversations I've seen on both sides:</p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Output thinking</th>
+            <th>Outcome thinking</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"We shipped 14 features this quarter."</td>
+            <td>"Activation rate improved 18% this quarter."</td>
+          </tr>
+          <tr>
+            <td>"We hit our velocity target every sprint."</td>
+            <td>"We reduced time-to-value for new users by 3 days."</td>
+          </tr>
+          <tr>
+            <td>"The roadmap is full through Q3."</td>
+            <td>"We have 3 hypotheses we're testing in Q3."</td>
+          </tr>
+          <tr>
+            <td>"We closed all the tickets."</td>
+            <td>"The feature moved the metric. Here's the data."</td>
+          </tr>
+          <tr>
+            <td>"We're behind on the roadmap."</td>
+            <td>"We paused this feature because the data didn't support it."</td>
+          </tr>
+          <tr>
+            <td>"This is what we committed to building."</td>
+            <td>"This is the problem we committed to solving."</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>Read those out loud and you can feel the difference. The right column requires more courage — because it means being willing to say a feature didn't work, to stop building something mid-flight, or to challenge a stakeholder's pet request with data instead of compliance.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>The shift I made — and what changed</h2>
+
+      <p>When I moved from output-focused to outcome-focused product leadership, three things changed immediately.</p>
+
+      <p><strong>Roadmap conversations changed.</strong> Instead of "here are the features we're building," the conversation became "here are the bets we're making and here's what we expect to see if we're right." That framing turns every roadmap item into a hypothesis with a measurable prediction — which means you know much faster whether you're on track or need to pivot.</p>
+
+      <p><strong>Sprint reviews changed.</strong> We stopped celebrating shipping and started asking the harder question: did this work? We built a rhythm of reviewing downstream metrics alongside release notes. Sometimes the answer was yes. Sometimes no. Both were valuable — because a fast "no" meant we could redirect before sinking more investment into the wrong direction.</p>
+
+      <p><strong>My relationship with stakeholders changed.</strong> This one surprised me. When I started leading with outcomes — "here's the retention number and here's what we're doing to move it" — stakeholders actually became more aligned, not less. Because now we were all looking at the same thing: the result, not the roadmap. Feature debates become less relevant when everyone agrees on what success looks like.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>How to make the shift — 5 practical moves</h2>
+
+      <p>If your team is output-focused right now, you can't fix it overnight. Culture changes at the speed of consistent behavior, not announcements. Here's where to start:</p>
+
+      <h3>1. Define success before you build anything</h3>
+      <p>For every initiative, write down: "We will know this worked when [metric] moves from [X] to [Y] within [timeframe]." Force the specificity. Vague success criteria are output thinking in disguise — they let you claim victory without actually measuring anything.</p>
+
+      <h3>2. Add a "Did it work?" step to your review process</h3>
+      <p>Four to six weeks after every major release, schedule a retrospective that looks at downstream data. Not "did we ship it on time" — "did it do what we expected." Make this a standing ritual, not an occasional exercise. Teams learn what they practice.</p>
+
+      <h3>3. Reframe your roadmap as bets</h3>
+      <p>Replace feature descriptions with problem statements and hypotheses. "Build X feature" becomes "We believe that [solving problem Y] will result in [outcome Z], and we'll validate this by building [X] and measuring [metric]." It sounds like more work. It's actually less waste.</p>
+
+      <h3>4. Get comfortable killing things</h3>
+      <p>Outcome thinking requires the willingness to stop building something that isn't working — even if it's on the roadmap, even if leadership is excited about it, even if the team spent three weeks on it. This is the hardest cultural shift. Start small. Build the muscle. It gets easier.</p>
+
+      <h3>5. Connect every feature to a company metric</h3>
+      <p>If you can't draw a line from the feature you're building to a business metric someone in the executive suite cares about, ask why you're building it. Not to kill it — but to force the conversation that should have happened before it hit the roadmap. Sometimes the line exists but nobody made it explicit. Make it explicit.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>A word on AI and outcomes</h2>
+
+      <p>This matters more right now than it ever has — because of AI.</p>
+
+      <p>Teams are under enormous pressure to ship AI features. The output pressure is intense: announce the AI roadmap, ship the AI integration, demo the AI capability. And in that rush, the outcome question gets buried. Does this AI feature actually improve the user's life? Does it move the metric we care about? Is it solving a real problem or checking a "we have AI" box?</p>
+
+      <p>I've written about this before — the Jurassic Park problem of being so focused on whether you can that you forget to ask whether you should. That's output thinking at its most dangerous. And right now, in the AI gold rush, it's everywhere.</p>
+
+      <p>The PMs who will build the most durable AI products are the ones who slow down long enough to define the outcome first. The metric that proves the AI feature was worth building. The behavior change that tells you the investment paid off.</p>
+
+      <p>Ship fast. But know what you're trying to prove.</p>
+
+      <div class="section-divider"></div>
+
+      <p>The move from outputs to outcomes isn't a methodology change or a framework adoption. It's a fundamental shift in how you think about your job. Your job isn't to ship features. Your job is to move metrics that matter. Features are how you do it — not what you're trying to do.</p>
+
+      <p>That distinction sounds simple. Living it takes everything.</p>
+
+    </div>
+
+    <div class="related-cta">
+      <div class="related-cta-eyebrow">Want to go deeper?</div>
+      <div class="related-cta-title">The PM Promotion Playbook</div>
+      <p class="related-cta-body">Everything I wish I'd known earlier about thinking like a senior PM — including how to reframe your work around outcomes and get leadership to notice. Written for associate through senior PMs ready to move faster.</p>
+      <div class="cta-btn-row">
+        <a href="/pm-level/" class="btn-primary">PM Level Quiz</a>
+        <a href="/#contact" class="btn-secondary">Work with me</a>
+      </div>
+    </div>
+
+    <div class="related-posts">
+      <div class="related-posts-title">Keep reading</div>
+      <div class="related-posts-grid">
+        <a href="/blog/why-ai-is-non-negotiable-for-product-managers.html" class="related-post-link">
+          <span class="related-post-cat">AI · Product Management</span>
+          <span class="related-post-title">Why AI is Non-Negotiable for Product Managers</span>
+        </a>
+        <a href="/blog/the-pitfall-of-mediocrity-how-good-is-the-enemy-of-great-in-product-management.html" class="related-post-link">
+          <span class="related-post-cat">Product Management</span>
+          <span class="related-post-title">The Pitfall of Mediocrity: How Good is the Enemy of Great</span>
+        </a>
+        <a href="/blog/empowering-team-members-unlocking-productivity-and-innovation.html" class="related-post-link">
+          <span class="related-post-cat">Leadership</span>
+          <span class="related-post-title">Empowering Team Members: Unlocking Productivity and Innovation</span>
+        </a>
+        <a href="/blog/lessons-learned-what-i-wish-i-knew-as-a-new-product-manager.html" class="related-post-link">
+          <span class="related-post-cat">Product Management</span>
+          <span class="related-post-title">Lessons Learned: What I Wish I Knew as a New PM</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog/" class="back-link">← Back to all posts</a>
+      <div class="post-tags">
+        <span class="post-tag">Product Management</span>
+        <span class="post-tag">Strategy</span>
+        <span class="post-tag">Leadership</span>
+        <span class="post-tag">OKRs</span>
+      </div>
+    </footer>
+
+  </article>
+
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/blog-back-to-top.js"></script>
+  <script src="/js/analytics-events.js" defer></script>
+
+</body>
+</html>

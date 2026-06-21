@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -8,8 +10,7 @@
     gtag('js', new Date());
     gtag('config', 'G-3M3K7W9SXV');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Page not found — return to briancchristensen.com for PM insights, AI transformation thinking, and executive product management case studies." />
   <title>Page Not Found — Brian C. Christensen</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -126,14 +127,15 @@
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo">Brian C. Christensen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li><a href="/#work">Work</a></li>
-        <li><a href="/#writing">Writing</a></li>
-        <li><a href="/#ai-services">AI Services</a></li>
-        <li><a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank" rel="noopener noreferrer">PM Playbook</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
         <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
       </ul>
     </div>
@@ -158,7 +160,7 @@
           <a href="/#ai-services">AI consulting services</a>
           <a href="/blog/">All blog posts</a>
           <a href="/#contact">Get in touch</a>
-          <a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank" rel="noopener noreferrer">PM Promotion Playbook</a>
+          <a href="/pm-level/">Free PM Level Quiz →</a>
         </div>
       </div>
     </div>
@@ -168,13 +170,20 @@
     <span class="footer-logo">Brian C. Christensen</span>
     <div class="footer-links">
       <a href="/#work">Work</a>
-      <a href="/#writing">Writing</a>
-      <a href="/#ai-services">AI Services</a>
+      <a href="/about.html">About</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
       <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:brian@briancchristensen.com">Email</a>
     </div>
     <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
   </footer>
+
+  <script src="/js/main.js"></script>
+
+  <script src="/js/analytics-events.js" defer></script>
+
+<a href="/pm-level/" class="playbook-float" aria-label="Take the PM Level Assessment">📊 Free PM Level Quiz</a>
 
 </body>
 </html>

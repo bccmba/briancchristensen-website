@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="We turned off our IDEs for a day and let AI do the migration work. The throughput jumped 10×. Here's the result — and the five things I'm not yet concluding from it." />
+  <link rel="canonical" href="https://briancchristensen.com/blog/the-10x-day.html" />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Brian C. Christensen" />
+  <meta property="og:title" content="The 10× Day — Brian C. Christensen" />
+  <meta property="og:description" content="What happened when we told our developers to turn off their IDEs and let AI do the work — and the five caveats that keep me honest." />
+  <meta property="og:url" content="https://briancchristensen.com/blog/the-10x-day.html" />
+  <meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="The 10× Day — Brian C. Christensen" />
+  <meta name="twitter:description" content="What happened when we told our developers to turn off their IDEs and let AI do the work — and the five caveats that keep me honest." />
+  <meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <title>The 10× Day — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/blog.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "The 10× Day",
+    "description": "We turned off our IDEs for a day and let AI do the migration work. The throughput jumped 10×. Here's the result — and the five things I'm not yet concluding from it.",
+    "datePublished": "2026-05-30",
+    "dateModified": "2026-05-30",
+    "author": {
+      "@type": "Person",
+      "name": "Brian C. Christensen",
+      "url": "https://briancchristensen.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Brian C. Christensen",
+      "url": "https://briancchristensen.com"
+    },
+    "url": "https://briancchristensen.com/blog/the-10x-day.html",
+    "mainEntityOfPage": "https://briancchristensen.com/blog/the-10x-day.html",
+    "keywords": ["AI", "AI transformation", "developer productivity", "engineering leadership", "product management", "measurement", "innovation day"]
+  }
+  </script>
+  <style>
+    .post { max-width: 680px; margin: 0 auto; padding: 4rem 2rem; }
+    .post-header { margin-bottom: 3rem; }
+    .post-header .post-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    .post-header .post-date {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .post-header .post-reading-time { font-size: 12px; color: var(--text-muted); }
+    .post-header .post-title {
+      font-family: var(--font-serif);
+      font-size: clamp(30px, 5vw, 44px);
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -1.5px;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+    }
+    .post-header .post-title em { font-style: italic; color: var(--blue); }
+    .post-header .post-subtitle {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+    .post-header .post-lead {
+      font-size: 18px;
+      line-height: 1.75;
+      color: var(--text-muted);
+      border-left: 3px solid var(--teal);
+      padding-left: 1.25rem;
+    }
+    .post-content { font-size: 17px; line-height: 1.8; color: var(--text); }
+    .post-content p { margin-bottom: 1.5rem; }
+    .post-content h2 {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      font-weight: 300;
+      color: var(--navy);
+      margin: 3rem 0 1rem;
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+    .post-content h2 em { font-style: italic; color: var(--blue); }
+    .post-content strong { color: var(--text); font-weight: 500; }
+    .post-content blockquote {
+      border-left: 3px solid var(--teal);
+      padding: 1rem 1.5rem;
+      margin: 2rem 0;
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+    }
+    .post-content a { color: var(--teal); text-decoration: underline; text-underline-offset: 3px; }
+    .post-content a:hover { color: var(--navy); }
+    .post-content ul { margin: 0 0 1.5rem 1.25rem; padding-left: 0.5rem; }
+    .post-content ul li { margin-bottom: 0.75rem; line-height: 1.7; }
+    .section-divider { height: 0.5px; background: var(--border); margin: 3rem 0; }
+
+    .stat-callout {
+      background: var(--bg-soft);
+      border: 0.5px solid var(--border);
+      border-left: 3px solid var(--blue);
+      border-radius: 10px;
+      padding: 1.5rem 1.75rem;
+      margin: 2rem 0 2.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: center;
+    }
+    .stat-callout-n {
+      font-family: var(--font-serif);
+      font-size: 44px;
+      font-weight: 300;
+      color: var(--navy);
+      letter-spacing: -2px;
+      line-height: 1;
+    }
+    .stat-callout-l {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+    .stat-callout-l strong { color: var(--text); font-weight: 500; }
+
+    .post-footer {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .back-link {
+      color: var(--teal);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .back-link:hover { text-decoration: underline; }
+    .post-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .post-tag {
+      font-size: 11px;
+      padding: 4px 12px;
+      border-radius: 99px;
+      background: var(--bg-soft);
+      color: var(--text-muted);
+      border: 0.5px solid var(--border);
+    }
+    .related-cta {
+      background: var(--bg-soft);
+      border: 0.5px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .related-cta-eyebrow {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .related-cta-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.5px;
+    }
+    .related-cta-body {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 1.25rem;
+    }
+    .cta-btn-row { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+    .related-posts {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 0.5px solid var(--border);
+    }
+    .related-posts-title {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .related-posts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .related-post-link {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding: 1rem 1.25rem;
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      text-decoration: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .related-post-link:hover { border-color: var(--teal); background: var(--bg-soft); }
+    .related-post-cat {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+    }
+    .related-post-title { font-size: 14px; font-weight: 500; color: var(--navy); line-height: 1.35; }
+    @media (max-width: 600px) {
+      .post { padding: 2.5rem 1.25rem; }
+      .related-posts-grid { grid-template-columns: 1fr; }
+      .stat-callout { grid-template-columns: 1fr; gap: 0.75rem; text-align: left; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/case-study-compensation-payout.html">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
+        <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="post">
+
+    <header class="post-header">
+      <span class="post-eyebrow">AI · Engineering · Leadership</span>
+      <div class="post-date">
+        <span>May 30, 2026</span>
+        <span class="post-reading-time">4 min read</span>
+      </div>
+      <h1 class="post-title">The <em>10×</em> Day</h1>
+      <p class="post-subtitle">What happened when our team turned off their IDEs for a day — and what I'm not yet concluding from it.</p>
+      <p class="post-lead">For the past few months my team has been moving our custom tools from one application base to another. It's the kind of work that sounds straightforward but isn't — each tool has its own quirks, its own state, its own little knot of business logic that nobody fully remembers writing. We had settled into a steady cadence: roughly <strong>one developer-week per application</strong>. Predictable enough that I could plan against it.</p>
+    </header>
+
+    <div class="post-content">
+
+      <p>Last week we ran an Innovation Day with a single rule: <strong>turn off your IDE. Let the AI do the work.</strong></p>
+
+      <p>I'd expected the day to feel like a stunt. We'd compare notes, talk about what worked, maybe ship a half-finished proof of concept. That's not what happened.</p>
+
+      <p>By the end of the day, each developer had moved <strong>two applications</strong>.</p>
+
+      <div class="stat-callout">
+        <div class="stat-callout-n">10×</div>
+        <div class="stat-callout-l">Five developer-days per application became <strong>half a developer-day</strong>. A 10× change in throughput for this specific kind of work, on this specific day.</div>
+      </div>
+
+      <p>Which is exactly the moment I want to be careful.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>What I'm <em>not</em> concluding</h2>
+
+      <p>A single Innovation Day is a single data point. Before I extrapolate, here are the questions I'm holding open:</p>
+
+      <p><strong>1. The code is moved, not yet running in production.</strong> Migration complete is not the same as running clean in prod. Until those applications ship and run without regression, the 10× is provisional. The win we measured was the front-loaded work — the typing, the wiring, the boilerplate. If we discover a wave of follow-up fixes in QA, the effective ratio comes down.</p>
+
+      <p><strong>2. Migration is the easy case for AI.</strong> Moving an existing application from one base to another is a translation problem with a clear source and a clear target. That's the kind of task large language models are best at. It does <em>not</em> follow that greenfield design work, ambiguous requirements gathering, or production incident response will see anything like 10×. I'd be surprised if they did.</p>
+
+      <p><strong>3. We picked a single category of work.</strong> The applications we moved were comparable enough that the result is internally consistent, but I haven't yet run the same experiment on harder cases — apps with the gnarliest business logic, the most fragile state, the most legacy quirks. Those might still be one-dev-week problems.</p>
+
+      <p><strong>4. One day is one day.</strong> Sustained productivity is a different claim than peak productivity. The thing I actually want to know — and don't yet — is whether the team can hold any meaningful fraction of this gain across normal weeks, with the usual interruptions, meetings, and ambient complexity. Innovation Day is a controlled environment. The rest of the calendar is not.</p>
+
+      <p><strong>5. The constraint mattered more than the AI.</strong> "IDEs off" wasn't theater. It forced the team out of muscle memory and into a different working pattern — narrating intent in natural language, reviewing AI output as the primary craft, batching work differently. I suspect the result is as much about the constraint as about the tooling. If we just say "use AI more" without changing how work flows, I'd expect a much smaller effect.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>What I <em>am</em> measuring next</h2>
+
+      <p>The post-Innovation-Day plan is straightforward. Over the next 6–8 weeks, on the same migration project, I want to see:</p>
+
+      <ul>
+        <li><strong>How much of the 10× peak shows up in regular weeks.</strong> Even a sustained 3× would be a significant business result. I'd rather measure the floor honestly than claim the ceiling.</li>
+        <li><strong>What the production-readiness cost looks like.</strong> Time-to-merge is a proxy. Time-to-clean-running-prod is the real number.</li>
+        <li><strong>Where the approach breaks.</strong> Which of the harder applications eat the gain. That's where the next round of process design has to happen.</li>
+      </ul>
+
+      <p>I'll report the answers, including the ones that aren't flattering.</p>
+
+      <div class="section-divider"></div>
+
+      <h2>The <em>takeaway</em></h2>
+
+      <p>When you remove a tool people are used to, you sometimes discover what the tool was actually costing. That's the part of the day I keep thinking about. We didn't get faster because the AI is smarter than our developers — our developers are excellent, and the AI on its own would have produced nothing. We got faster because the team was forced into a different working pattern, and that pattern turned out to be ~10× as efficient for one specific kind of work.</p>
+
+      <blockquote>The right conclusion isn't "AI changes everything." It's narrower and more useful: for translation-shaped problems, with the right working pattern, the ceiling is much higher than I had been planning for.</blockquote>
+
+      <p>That's worth measuring carefully — and worth designing around, even before the picture is complete.</p>
+
+      <p style="font-style:italic;color:var(--text-muted);font-size:15px;">Running an AI initiative of your own and measuring something I should know about? I'd love to hear how you're doing it — find me on <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>.</p>
+
+    </div>
+
+    <div class="related-cta">
+      <div class="related-cta-eyebrow">More on AI adoption that actually ships</div>
+      <div class="related-cta-title">Why AI is Non-Negotiable for Product Managers</div>
+      <p class="related-cta-body">What real AI adoption looks like in enterprise product teams — beyond the demos and into the work that creates durable results.</p>
+      <div class="cta-btn-row">
+        <a href="/blog/why-ai-is-non-negotiable-for-product-managers.html" class="btn-primary">Read the article</a>
+        <a href="/pm-level/" class="btn-secondary">Take the PM Level Quiz</a>
+      </div>
+    </div>
+
+    <div class="related-posts">
+      <div class="related-posts-title">Keep reading</div>
+      <div class="related-posts-grid">
+        <a href="/blog/why-ai-is-non-negotiable-for-product-managers.html" class="related-post-link">
+          <span class="related-post-cat">AI · Product Management</span>
+          <span class="related-post-title">Why AI is Non-Negotiable for Product Managers</span>
+        </a>
+        <a href="/blog/the-one-good-shot-problem-what-golf-taught-me-about-ai.html" class="related-post-link">
+          <span class="related-post-cat">AI · Strategy</span>
+          <span class="related-post-title">The One Good Shot Problem: What Golf Taught Me About AI</span>
+        </a>
+        <a href="/blog/stop-measuring-outputs-start-delivering-outcomes.html" class="related-post-link">
+          <span class="related-post-cat">Product Management · Strategy</span>
+          <span class="related-post-title">Stop Measuring Outputs. Start Delivering Outcomes.</span>
+        </a>
+        <a href="/blog/the-wisdom-of-jurassic-park-a-lesson-for-product-managers.html" class="related-post-link">
+          <span class="related-post-cat">AI · Strategy</span>
+          <span class="related-post-title">The Wisdom of Jurassic Park: A Lesson for Product Managers</span>
+        </a>
+      </div>
+    </div>
+
+    <footer class="post-footer">
+      <a href="/blog/" class="back-link">← Back to all posts</a>
+      <div class="post-tags">
+        <span class="post-tag">AI</span>
+        <span class="post-tag">Engineering</span>
+        <span class="post-tag">Leadership</span>
+        <span class="post-tag">AI Transformation</span>
+      </div>
+    </footer>
+
+  </article>
+
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+  <a href="/pm-level/" class="playbook-float" aria-label="Take the PM Level Assessment">📊 Free PM Level Quiz</a>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/blog-back-to-top.js"></script>
+  <script src="/js/analytics-events.js" defer></script>
+
+</body>
+</html>

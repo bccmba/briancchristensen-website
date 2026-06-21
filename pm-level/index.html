@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-3M3K7W9SXV');
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PM Level Assessment — Brian C. Christensen</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1B3A5C;
+    --blue: #2E6DA4;
+    --teal: #0F7B6C;
+    --teal-light: #E0F2EF;
+    --navy-light: #EDF2F7;
+    --gold: #C8923A;
+    --white: #FFFFFF;
+    --off-white: #F8F9FB;
+    --gray-100: #F1F4F8;
+    --gray-200: #E2E8F0;
+    --gray-400: #94A3B8;
+    --gray-600: #64748B;
+    --gray-800: #1E293B;
+    --text: #1B2A3B;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--off-white);
+    color: var(--text);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Background texture */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 50% at 10% 20%, rgba(15,123,108,0.06) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 40% at 90% 80%, rgba(46,109,164,0.07) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Header */
+  .site-header {
+    text-align: center;
+    padding: 3rem 0 2.5rem;
+  }
+
+  .brand-label {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .brand-label::before,
+  .brand-label::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 1px;
+    background: var(--teal);
+    opacity: 0.4;
+  }
+
+  .site-title {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .site-subtitle {
+    font-size: 16px;
+    color: var(--gray-600);
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto 2rem;
+  }
+
+  .time-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--navy);
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 6px 14px;
+    border-radius: 99px;
+  }
+
+  /* Progress */
+  .progress-wrap {
+    margin-bottom: 2rem;
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .progress-label {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--gray-600);
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .progress-count {
+    font-size: 12px;
+    color: var(--gray-400);
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+  }
+
+  .progress-track {
+    height: 4px;
+    background: var(--gray-200);
+    border-radius: 99px;
+    overflow: hidden;
+  }
+
+  .progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--teal), var(--blue));
+    border-radius: 99px;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Question card */
+  .question-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 24px rgba(27,58,92,0.08), 0 1px 4px rgba(27,58,92,0.04);
+    border: 1px solid rgba(27,58,92,0.06);
+    animation: slideUp 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .q-category {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 0.75rem;
+  }
+
+  .q-text {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+    font-weight: 600;
+    color: var(--navy);
+    line-height: 1.45;
+    margin-bottom: 2rem;
+  }
+
+  /* Options */
+  .options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .option {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 14px 18px;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    background: white;
+    text-align: left;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .option::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(15,123,108,0.04), rgba(46,109,164,0.04));
+    opacity: 0;
+    transition: opacity 0.18s;
+  }
+
+  .option:hover {
+    border-color: var(--teal);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(15,123,108,0.1);
+  }
+
+  .option:hover::before { opacity: 1; }
+
+  .option.selected {
+    border-color: var(--teal);
+    background: var(--teal-light);
+    box-shadow: 0 4px 16px rgba(15,123,108,0.15);
+  }
+
+  .option-dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid var(--gray-300, #CBD5E0);
+    flex-shrink: 0;
+    margin-top: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.18s;
+  }
+
+  .option.selected .option-dot {
+    border-color: var(--teal);
+    background: var(--teal);
+  }
+
+  .option.selected .option-dot::after {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: white;
+  }
+
+  .option-text {
+    font-size: 14.5px;
+    line-height: 1.5;
+    color: var(--gray-800);
+    font-weight: 400;
+  }
+
+  .option.selected .option-text {
+    color: var(--navy);
+    font-weight: 500;
+  }
+
+  /* Nav */
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .btn-back {
+    background: none;
+    border: 1.5px solid var(--gray-200);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: var(--gray-600);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    transition: all 0.18s;
+  }
+
+  .btn-back:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+  }
+
+  .btn-next {
+    background: var(--navy);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px 28px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+  }
+
+  .btn-next:hover { background: var(--blue); transform: translateY(-1px); }
+  .btn-next:disabled { background: var(--gray-400); cursor: not-allowed; transform: none; }
+
+  /* Results */
+  .result-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 40px rgba(27,58,92,0.12);
+    animation: slideUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .result-hero {
+    padding: 3rem 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .result-hero.pm       { background: linear-gradient(135deg, #1B3A5C 0%, #2E6DA4 100%); }
+  .result-hero.senior   { background: linear-gradient(135deg, #0F7B6C 0%, #1B3A5C 100%); }
+  .result-hero.staff    { background: linear-gradient(135deg, #C8923A 0%, #1B3A5C 100%); }
+  .result-hero.principal{ background: linear-gradient(135deg, #1B3A5C 0%, #0F7B6C 100%); }
+
+  .result-level-label {
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.75rem;
+  }
+
+  .result-level-name {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(2rem, 6vw, 3.5rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1;
+    margin-bottom: 1rem;
+  }
+
+  .result-tagline {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.6;
+    max-width: 420px;
+    margin: 0 auto;
+  }
+
+  .result-body { padding: 2.5rem; }
+
+  .result-section-title {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 1rem;
+  }
+
+  .result-description {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--gray-600);
+    margin-bottom: 2rem;
+  }
+
+  .strengths-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 480px) { .strengths-grid { grid-template-columns: 1fr; } }
+
+  .strength-item {
+    background: var(--gray-100);
+    border-radius: 10px;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--gray-800);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.4;
+  }
+
+  .strength-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--teal);
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .gap-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 2rem;
+  }
+
+  .gap-item {
+    background: #FFF8F0;
+    border-left: 3px solid var(--gold);
+    border-radius: 0 10px 10px 0;
+    padding: 12px 14px;
+    font-size: 13px;
+    color: var(--gray-800);
+    line-height: 1.5;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--gray-200);
+    margin: 2rem 0;
+  }
+
+  /* CTA */
+  .cta-box {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--blue) 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .cta-label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 0.5rem;
+  }
+
+  .cta-title {
+    font-family: 'Fraunces', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  .cta-desc {
+    font-size: 14px;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: var(--navy);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+
+  .cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  }
+
+  .cta-price {
+    display: inline-block;
+    background: var(--teal);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 99px;
+    margin-left: 6px;
+  }
+
+  .restart-btn {
+    display: block;
+    margin: 1.5rem auto 0;
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: var(--gray-400);
+    cursor: pointer;
+    font-family: 'DM Sans', sans-serif;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .restart-btn:hover { color: var(--gray-600); }
+
+  /* Footer */
+  .footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 12px;
+    color: var(--gray-400);
+  }
+
+  .footer a { color: var(--teal); text-decoration: none; }
+
+  /* Screen reader only */
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); }
+</style>
+<link rel="canonical" href="https://briancchristensen.com/pm-level/" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<meta name="description" content="Free PM Level Assessment — 12 questions, 2 minutes. Find out if you're PM, Senior PM, Staff, or Principal level and get a personalized playbook recommendation." />
+<meta property="og:title" content="What PM Level Are You Actually Operating At?" />
+<meta property="og:description" content="12 questions. 2 minutes. Get an honest assessment of your PM level and a personalized playbook recommendation. No email required." />
+<meta property="og:url" content="https://briancchristensen.com/pm-level/" />
+<meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="What PM Level Are You Actually Operating At?" />
+<meta name="twitter:description" content="12 questions. 2 minutes. Honest PM level assessment with personalized playbook recommendation." />
+<meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+<script>
+  function setSeasonalFavicon() {
+    const m = new Date().getMonth() + 1;
+    const d = new Date().getDate();
+    let icon = '/favicon.svg';
+    if ((m === 12 && d >= 29) || (m === 1 && d <= 2)) icon = '/favicons/favicon-nye.svg';
+    else if (m === 2 && d >= 12 && d <= 14)            icon = '/favicons/favicon-val.svg';
+    else if (m === 3 && d >= 14 && d <= 17)            icon = '/favicons/favicon-stpat.svg';
+    else if (m === 7 && d >= 1  && d <= 7)             icon = '/favicons/favicon-july4.svg';
+    else if (m === 10 && d >= 24)                      icon = '/favicons/favicon-halloween.svg';
+    else if (m === 11 && d >= 20 && d <= 28)           icon = '/favicons/favicon-thanks.svg';
+    else if (m === 12 && d >= 10 && d <= 26)           icon = '/favicons/favicon-xmas.svg';
+    const link = document.querySelector('link[rel="icon"]');
+    if (link) link.href = icon;
+  }
+  setSeasonalFavicon();
+</script>
+</head>
+<body>
+<div style="text-align:center;padding:0.875rem 2rem;border-bottom:1px solid rgba(27,58,92,0.08);font-family:'DM Sans',sans-serif;background:white;">
+  <a href="/" style="font-size:13px;color:#1B3A5C;text-decoration:none;font-weight:500;letter-spacing:-0.1px;">← briancchristensen.com</a>
+</div>
+
+<div class="container">
+  <header class="site-header">
+    <div class="brand-label">Brian C. Christensen</div>
+    <h1 class="site-title">What PM Level Are You Actually Operating At?</h1>
+    <p class="site-subtitle">Answer 12 questions based on your real day-to-day work. Get an honest assessment of where you sit on the IC track — and exactly what to do next.</p>
+    <span class="time-badge">⏱ 2 minutes · No email required</span>
+  </header>
+
+  <div id="quiz-wrap">
+    <div class="progress-wrap" id="progress-wrap">
+      <div class="progress-meta">
+        <span class="progress-label">Your assessment</span>
+        <span class="progress-count" id="progress-count">Question 1 of 12</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progress-fill" style="width:8.33%"></div>
+      </div>
+    </div>
+
+    <div class="question-card" id="question-card"></div>
+  </div>
+
+  <div id="result-wrap" style="display:none;"></div>
+
+  <footer class="footer">
+    Built by <a href="https://briancchristensen.com" target="_blank">briancchristensen.com</a> · PM Promotion Playbook available on <a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank" rel="noopener noreferrer">Gumroad</a>
+  </footer>
+</div>
+
+<script>
+// ─── QUIZ DATA ────────────────────────────────────────────────────────────────
+// Each answer scores: 1 = PM, 2 = Senior PM, 3 = Staff PM, 4 = Principal PM
+
+const questions = [
+  {
+    category: "Scope & Ownership",
+    text: "When a problem lands in your area, how do you typically respond?",
+    options: [
+      { text: "I work on the problem as defined and escalate anything outside my lane.", score: 1 },
+      { text: "I reframe the problem if needed and own the solution end-to-end.", score: 2 },
+      { text: "I often find the real problem is different from what was stated — and I pull in whoever needs to be involved across teams.", score: 3 },
+      { text: "I set the framework for how problems in my domain get defined and prioritized at an org level.", score: 4 },
+    ]
+  },
+  {
+    category: "Roadmap & Strategy",
+    text: "Where do your most important roadmap items come from?",
+    options: [
+      { text: "Leadership, sales requests, or the roadmap handed to me.", score: 1 },
+      { text: "A mix — I push back on bad ideas and originate some of my own.", score: 2 },
+      { text: "Mostly self-originated, driven by customer insight and market signals others haven't connected yet.", score: 3 },
+      { text: "I shape what the roadmap should be across multiple teams — and influence what other PMs prioritize.", score: 4 },
+    ]
+  },
+  {
+    category: "Stakeholder Relationships",
+    text: "How would you describe your relationship with senior leaders (VP level and above)?",
+    options: [
+      { text: "I present to them when asked. They know my work but not necessarily me.", score: 1 },
+      { text: "I have regular touchpoints with my skip-level and a few key stakeholders.", score: 2 },
+      { text: "Senior leaders in adjacent functions actively seek my input. I'm in rooms I wasn't invited to because people wanted me there.", score: 3 },
+      { text: "I have a standing relationship with C-suite or board-level stakeholders. I represent product at that level without needing a manager to sponsor me.", score: 4 },
+    ]
+  },
+  {
+    category: "Decision-Making",
+    text: "How do you handle ambiguous decisions with no clear right answer?",
+    options: [
+      { text: "I escalate or wait for more information before moving.", score: 1 },
+      { text: "I make a call with the information I have and flag the decision to my manager.", score: 2 },
+      { text: "I make the call, own the outcome, and build in a mechanism to learn fast if I'm wrong.", score: 3 },
+      { text: "I define the decision-making framework others use when facing ambiguity in my domain.", score: 4 },
+    ]
+  },
+  {
+    category: "Customer & Market Insight",
+    text: "How deep is your customer knowledge?",
+    options: [
+      { text: "I read research and attend some user interviews. I have a working understanding.", score: 1 },
+      { text: "I run my own research regularly. I can anticipate what customers will say before they say it.", score: 2 },
+      { text: "I've discovered insights with no prior internal awareness that changed strategic direction. I'm the deepest customer expert in the building.", score: 3 },
+      { text: "I've built the industry vocabulary the company uses. My customer knowledge shapes how sales, marketing, and leadership talk about the market.", score: 4 },
+    ]
+  },
+  {
+    category: "Business Outcomes",
+    text: "How do you connect your product work to business results?",
+    options: [
+      { text: "I track output metrics — shipped features, velocity, delivery timelines.", score: 1 },
+      { text: "I own outcome metrics for my area and report on them regularly.", score: 2 },
+      { text: "I can draw a direct line from product decisions to revenue, retention, or strategic outcomes — and I present that case to senior leadership.", score: 3 },
+      { text: "I define how product success is measured across the organization and hold others accountable to it.", score: 4 },
+    ]
+  },
+  {
+    category: "Influence & Leadership",
+    text: "How do you get things done when you have no direct authority?",
+    options: [
+      { text: "I rely on my manager to unblock things when I need cross-team cooperation.", score: 1 },
+      { text: "I build relationships proactively and can usually move things without escalating.", score: 2 },
+      { text: "I've led cross-functional initiatives that changed how multiple teams work together — without a formal mandate.", score: 3 },
+      { text: "Other leaders come to me to broker alignment. I'm the person who makes things move at an org level.", score: 4 },
+    ]
+  },
+  {
+    category: "Developing Others",
+    text: "What role do you play in developing other PMs or product thinking?",
+    options: [
+      { text: "I focus on my own work. Developing others isn't really part of my role yet.", score: 1 },
+      { text: "I mentor informally — answer questions, give feedback when asked.", score: 2 },
+      { text: "I'm actively coaching at least one PM. I document my frameworks so others can use them.", score: 3 },
+      { text: "I set the craft standard for the product function. My thinking shapes how the whole team approaches product work.", score: 4 },
+    ]
+  },
+  {
+    category: "Operating Mode",
+    text: "How do you typically get your work done?",
+    options: [
+      { text: "My manager defines priorities and I execute well within them.", score: 1 },
+      { text: "I define my own priorities within a given scope and operate with significant autonomy.", score: 2 },
+      { text: "I define scope, set priorities, and make strategic calls across multiple teams with minimal oversight.", score: 3 },
+      { text: "I set the direction for the product function and enable others to execute. My job is to make the system better, not to do the work.", score: 4 },
+    ]
+  },
+  {
+    category: "Visibility",
+    text: "How visible is your work to leaders above your manager?",
+    options: [
+      { text: "My manager knows my work. Skip-level and above probably don't know the details.", score: 1 },
+      { text: "My skip-level knows my name and a few key things I've shipped.", score: 2 },
+      { text: "Senior leaders outside my chain of command know my work and mention it without prompting.", score: 3 },
+      { text: "My work is referenced at the executive level. I'm known as the source of specific strategic decisions or company-level outcomes.", score: 4 },
+    ]
+  },
+  {
+    category: "Strategic Thinking",
+    text: "When your company makes a strategic decision, what's your role?",
+    options: [
+      { text: "I'm informed afterward and adapt my roadmap accordingly.", score: 1 },
+      { text: "I'm sometimes in the room or consulted — my input shapes some decisions.", score: 2 },
+      { text: "I'm regularly consulted on strategic decisions outside my immediate area. My perspective is actively sought before calls are made.", score: 3 },
+      { text: "I influence company-level strategic direction. I've changed a CEO or board-level decision with my product and market perspective.", score: 4 },
+    ]
+  },
+  {
+    category: "Self-Awareness",
+    text: "Which statement best describes how you think about your own career level?",
+    options: [
+      { text: "I'm focused on doing my current job well and getting the fundamentals right.", score: 1 },
+      { text: "I know I'm ready for the next level — I'm already doing some of that work.", score: 2 },
+      { text: "I'm operating 1–2 levels above my title. The scope and impact are there; the recognition hasn't caught up.", score: 3 },
+      { text: "My title significantly under-represents what I actually do. I'm defining the function, not just executing within it.", score: 4 },
+    ]
+  }
+];
+
+// ─── RESULTS DATA ─────────────────────────────────────────────────────────────
+const results = {
+  pm: {
+    key: "pm",
+    label: "You're operating at",
+    level: "PM Level",
+    tagline: "Your foundation is solid. The next step is operating above your current scope — before anyone asks you to.",
+    description: "You're in the execution phase of your PM career — and that's the right place to start. You deliver well, you understand your product area, and you're building the instincts that compound over time. The gap between where you are and Senior PM isn't about doing more. It's about reframing your work from output to outcomes, building relationships beyond your immediate team, and starting to operate one level above your title before you're given permission to.",
+    strengths: [
+      "Executing reliably within defined scope",
+      "Building foundational PM skills",
+      "Earning trust through delivery",
+      "Developing product instincts",
+    ],
+    gaps: [
+      "Visibility: your wins need to reach people beyond your manager",
+      "Scope: start treating problems as larger than your defined area",
+      "Outcomes: connect your work to business results, not just features shipped",
+      "Relationships: build deliberate connections outside your immediate team",
+    ],
+    playbook: 1,
+    cta: "The PM Promotion Playbook",
+    ctaDesc: "A hiring manager's blueprint for getting to Senior PM faster — including AI prompts to accelerate every step.",
+    ctaUrl: "https://brianchris.gumroad.com/l/pm_promotion_playbook",
+    price: "$17"
+  },
+  senior: {
+    key: "senior",
+    label: "You're operating at",
+    level: "Senior PM Level",
+    tagline: "You're doing Senior PM work. The jump to Staff PM is about organizational footprint — not individual execution.",
+    description: "You're a strong Senior PM — autonomous, outcome-oriented, and trusted with real scope. The work is there. The gap to Staff PM is in how that work lands organizationally. Staff PMs don't just execute well on their own; they shape how the function works, build relationships at the director and VP level, and originate the highest-value strategic work rather than responding to it. You're close. The shift is from excellent individual contributor to someone the organization relies on for product thinking beyond their direct area.",
+    strengths: [
+      "Owning outcomes in your product area",
+      "Operating autonomously with real scope",
+      "Building cross-functional relationships",
+      "Making data-driven strategic calls",
+    ],
+    gaps: [
+      "Org footprint: senior leaders outside your team don't know your work well enough",
+      "Strategic origination: top priorities should come from you, not from leadership",
+      "Coaching: start deliberately developing others — it's a Staff PM signal",
+      "Executive visibility: your impact needs to be legible at VP and C-suite level",
+    ],
+    playbook: 2,
+    cta: "The Director of Product Playbook",
+    ctaDesc: "For Senior PMs ready to make the jump to Staff or Principal — built from the hiring manager's side of the table.",
+    ctaUrl: "https://brianchris.gumroad.com/l/director_of_product",
+    price: "$27"
+  },
+  staff: {
+    key: "staff",
+    label: "You're operating at",
+    level: "Staff PM Level",
+    tagline: "You're doing Principal-level work without Principal-level recognition. That gap is fixable.",
+    description: "You're operating at Staff PM scope — likely 1–2 levels above your current title. You originate strategy, you've built the industry knowledge others rely on, and you're influencing decisions well above your pay grade. The gap to Principal PM recognition isn't a capability problem. It's a visibility and organizational structure problem. The people making the call on your title don't have full access to what you actually do. Your job now is to make that work legible — formally, deliberately, and at the right level.",
+    strengths: [
+      "Self-originating the highest-value roadmap work",
+      "Deep customer and market expertise",
+      "Cross-functional influence without authority",
+      "Strategic impact at VP or C-suite level",
+    ],
+    gaps: [
+      "Outcome attribution: connect your product decisions to revenue and retention formally",
+      "Director relationships: build deliberate peer relationships at the director layer",
+      "Coaching visibility: make your PM development work explicit and attributable",
+      "Executive formalization: schedule structured time with C-suite, don't wait to be invited",
+    ],
+    playbook: 2,
+    cta: "The Director of Product Playbook",
+    ctaDesc: "The Staff-to-Principal transition guide — built specifically for PMs operating above their title.",
+    ctaUrl: "https://brianchris.gumroad.com/l/director_of_product",
+    price: "$27"
+  },
+  principal: {
+    key: "principal",
+    label: "You're operating at",
+    level: "Principal PM Level",
+    tagline: "You're already there. The question now is whether your organization has caught up to you.",
+    description: "You're operating at Principal or Director of Product scope. You're shaping company strategy, setting the craft standard for your function, and influencing decisions at the highest level. If your title reflects this — congratulations. If it doesn't, you're not facing a performance problem; you're facing a recognition and visibility problem. The Principal PM Playbook addresses exactly that gap: how to make work at your level legible to the people who need to formalize it.",
+    strengths: [
+      "Defining product strategy at an organizational level",
+      "Influencing C-suite and board-level decisions",
+      "Setting the craft and thinking standard for the function",
+      "Building the organizational systems others execute within",
+    ],
+    gaps: [
+      "If your title doesn't match your scope — make the recognition case explicitly",
+      "Ensure your strategic impact is formally attributed, not just known informally",
+      "Build succession: who are you developing to operate at your level?",
+      "Formalize executive relationships so they persist through org changes",
+    ],
+    playbook: 2,
+    cta: "The Director of Product Playbook",
+    ctaDesc: "For PMs operating at Principal level — with or without the title. Close the recognition gap.",
+    ctaUrl: "https://brianchris.gumroad.com/l/director_of_product",
+    price: "$27"
+  }
+};
+
+// ─── STATE ────────────────────────────────────────────────────────────────────
+let current = 0;
+let answers = [];
+let selected = null;
+
+// ─── RENDER QUESTION ──────────────────────────────────────────────────────────
+function renderQuestion() {
+  const q = questions[current];
+  selected = answers[current] !== undefined ? answers[current] : null;
+
+  // Track quiz start on first question only
+  if (current === 0 && answers.length === 0) {
+    gtag('event', 'quiz_started', {
+      'event_category': 'PM Level Quiz',
+      'event_label': 'Quiz Started'
+    });
+  }
+
+  document.getElementById('progress-count').textContent = `Question ${current + 1} of ${questions.length}`;
+  document.getElementById('progress-fill').style.width = `${((current + 1) / questions.length) * 100}%`;
+
+  const card = document.getElementById('question-card');
+  card.innerHTML = `
+    <div class="q-category">${q.category}</div>
+    <div class="q-text">${q.text}</div>
+    <div class="options" role="radiogroup">
+      ${q.options.map((opt, i) => `
+        <button type="button" class="option${selected === i ? ' selected' : ''}" onclick="selectOption(${i}, event)" role="radio" aria-checked="${selected === i}">
+          <div class="option-dot"></div>
+          <div class="option-text">${opt.text}</div>
+        </button>
+      `).join('')}
+    </div>
+    <div class="nav">
+      ${current > 0 ? `<button type="button" class="btn-back" onclick="goBack()">← Back</button>` : '<div></div>'}
+      <button type="button" class="btn-next" id="btn-next" onclick="goNext(); event.stopPropagation();" ${selected === null ? 'disabled' : ''}>
+        ${current === questions.length - 1 ? 'See my results →' : 'Next →'}
+      </button>
+    </div>
+  `;
+}
+
+function selectOption(i, event) {
+  if (event) { event.stopPropagation(); event.preventDefault(); }
+  selected = i;
+  answers[current] = i;
+  document.querySelectorAll('.option').forEach((el, idx) => {
+    el.classList.toggle('selected', idx === i);
+    el.setAttribute('aria-checked', idx === i);
+  });
+  document.getElementById('btn-next').disabled = false;
+}
+
+let _advancing = false;
+function goNext() {
+  if (selected === null) return;
+  if (_advancing) return;
+  _advancing = true;
+  setTimeout(() => { _advancing = false; }, 400);
+  answers[current] = selected;
+
+  // Track each question answered
+  gtag('event', 'quiz_question_answered', {
+    'event_category': 'PM Level Quiz',
+    'event_label': 'Question ' + (current + 1) + ' of ' + questions.length
+  });
+
+  if (current < questions.length - 1) {
+    current++;
+    selected = answers[current] !== undefined ? answers[current] : null;
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    showResult();
+  }
+}
+
+function goBack() {
+  if (current > 0) {
+    current--;
+    selected = answers[current] !== undefined ? answers[current] : null;
+    renderQuestion();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+// ─── CALCULATE RESULT ─────────────────────────────────────────────────────────
+function calcResult() {
+  const total = answers.reduce((sum, ansIdx, qIdx) => sum + questions[qIdx].options[ansIdx].score, 0);
+  const avg = total / questions.length;
+  if (avg < 1.75) return results.pm;
+  if (avg < 2.5)  return results.senior;
+  if (avg < 3.25) return results.staff;
+  return results.principal;
+}
+
+// ─── SHOW RESULT ──────────────────────────────────────────────────────────────
+function showResult() {
+  const r = calcResult();
+
+  // Track quiz completion and which result they got
+  gtag('event', 'quiz_completed', {
+    'event_category': 'PM Level Quiz',
+    'event_label': r.level,
+    'value': 1
+  });
+
+  document.getElementById('progress-wrap').style.display = 'none';
+  document.getElementById('question-card').style.display = 'none';
+
+  const wrap = document.getElementById('result-wrap');
+  wrap.style.display = 'block';
+  wrap.innerHTML = `
+    <div class="result-card">
+      <div class="result-hero ${r.key}">
+        <div class="result-level-label">${r.label}</div>
+        <div class="result-level-name">${r.level}</div>
+        <div class="result-tagline">${r.tagline}</div>
+      </div>
+      <div class="result-body">
+        <div class="result-section-title">What this means</div>
+        <div class="result-description">${r.description}</div>
+
+        <div class="result-section-title">Where you're strong</div>
+        <div class="strengths-grid">
+          ${r.strengths.map(s => `<div class="strength-item"><div class="strength-dot"></div>${s}</div>`).join('')}
+        </div>
+
+        <div class="result-section-title">Where to focus next</div>
+        <div class="gap-list">
+          ${r.gaps.map(g => `<div class="gap-item">${g}</div>`).join('')}
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="cta-box">
+          <div class="cta-label">Recommended for your level</div>
+          <div class="cta-title">${r.cta}</div>
+          <div class="cta-desc">${r.ctaDesc}</div>
+          <a href="${r.ctaUrl}" target="_blank" class="cta-btn" onclick="gtag('event', 'quiz_cta_clicked', {'event_category': 'PM Level Quiz', 'event_label': '${r.level}', 'event_label2': '${r.cta}'})">
+            Get the playbook <span class="cta-price">${r.price}</span>
+          </a>
+        </div>
+
+        <button type="button" class="restart-btn" onclick="restart()">Retake the assessment</button>
+      </div>
+    </div>
+  `;
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function restart() {
+  current = 0;
+  answers = [];
+  selected = null;
+  document.getElementById('progress-wrap').style.display = 'block';
+  document.getElementById('question-card').style.display = 'block';
+  document.getElementById('result-wrap').style.display = 'none';
+  renderQuestion();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+renderQuestion();
+</script>
+</body>
+</html>

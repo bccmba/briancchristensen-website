@@ -19,6 +19,8 @@
   --bg-soft:    #f8f8f6;
   --font-serif: 'Fraunces', Georgia, serif;
   --font-sans:  'DM Sans', system-ui, sans-serif;
+  --border-radius-lg: 12px;
+  --border-radius-md: 8px;
 }
 
 html { scroll-behavior: smooth; }
@@ -29,6 +31,16 @@ body {
   background: var(--bg);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+}
+
+/* ── ACCESSIBILITY ── */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+[tabindex="0"]:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 2px;
 }
 
 /* ── LAYOUT ── */
@@ -206,6 +218,13 @@ footer {
 .footer-links a { font-size: 13px; color: rgba(255,255,255,0.85); text-decoration: none; transition: color 0.2s; }
 .footer-links a:hover { color: white; }
 .footer-copy { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+/* ── ACCESSIBILITY: REDUCED MOTION ── */
+@media (prefers-reduced-motion: reduce) {
+  .ticker-track { animation: none; }
+  .reveal { transition: none; opacity: 1; transform: none; }
+  * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
 
 /* ── MOBILE ── */
 @media (max-width: 768px) {

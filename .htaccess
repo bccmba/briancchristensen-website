@@ -1,3 +1,41 @@
+# ── Block sensitive files & directories ──────────────────────────────────────
+
+# Block WordPress XML export and any XML dumps at root,
+# BUT allow sitemap.xml so search engines can still crawl it.
+<FilesMatch "\.xml$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+<Files "sitemap.xml">
+  Order allow,deny
+  Allow from all
+</Files>
+
+# Block .DS_Store files
+<FilesMatch "^\.DS_Store$">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Block all dotfiles (.gitignore, .gitattributes, .env, etc.)
+# Apache still reads .htaccess internally; this only blocks public fetches.
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>
+
+# Block .git directory and all its contents
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteRule ^\.git(/.*)?$ - [F,L]
+</IfModule>
+
+# Block direct access to debug log
+<Files "email_debug.log">
+  Order allow,deny
+  Deny from all
+</Files>
+
 ErrorDocument 404 /404.html
 
 # Cache static assets
@@ -22,4 +60,7 @@ ErrorDocument 404 /404.html
   Header always set X-Content-Type-Options nosniff
   Header always set X-Frame-Options SAMEORIGIN
   Header always set Referrer-Policy strict-origin-when-cross-origin
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+  Header always set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com https://challenges.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; frame-src https://challenges.cloudflare.com;"
 </IfModule>

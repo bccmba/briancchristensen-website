@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Product management speaker and AI keynote based in Utah. Brian C. Christensen — Front Conference 2023 speaker. Book for conferences and leadership offsites." />
+  <link rel="canonical" href="https://briancchristensen.com/speaking.html" />
+  <meta name="author" content="Brian C. Christensen" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Brian C. Christensen" />
+  <meta property="og:title" content="Brian C. Christensen — Product Management Speaker" />
+  <meta property="og:description" content="Product management speaker and AI transformation keynote speaker based in Utah. Speaker at Front Conference 2023. Book Brian for your next conference or leadership event." />
+  <meta property="og:url" content="https://briancchristensen.com/speaking.html" />
+  <meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Brian C. Christensen — Product Management Speaker" />
+  <meta name="twitter:description" content="Product management speaker and AI transformation keynote speaker based in Utah. Speaker at Front Conference 2023." />
+  <meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <title>Speaking — Brian C. Christensen</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,300;1,9..144,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-3M3K7W9SXV');
+  </script>
+  <style>
+
+    /* ── HERO ── */
+    .sp-hero {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      border-bottom: 0.5px solid var(--border);
+      min-height: 420px;
+    }
+    .sp-hero-left {
+      padding: 4rem 3rem 4rem 2rem;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .sp-title {
+      font-family: var(--font-serif);
+      font-size: clamp(34px, 5vw, 50px);
+      font-weight: 300;
+      line-height: 1.08;
+      color: var(--navy);
+      letter-spacing: -2px;
+      margin-bottom: 1.5rem;
+    }
+    .sp-title em { font-style: italic; color: var(--blue); }
+    .sp-lead {
+      font-size: 15px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      max-width: 420px;
+      margin-bottom: 2rem;
+    }
+    .sp-lead strong { color: var(--text); font-weight: 500; }
+    .btn-row { display: flex; gap: 12px; flex-wrap: wrap; }
+
+    .sp-hero-right {
+      padding: 4rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      text-align: center;
+    }
+    .sp-headshot {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 4px solid white;
+      box-shadow: 0 8px 32px rgba(27, 58, 92, 0.18);
+    }
+    .sp-hero-name {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .sp-hero-role {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+    .sp-badges {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .sp-badge {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 12px;
+      background: white;
+      border: 0.5px solid var(--border);
+      border-radius: 8px;
+      font-size: 12px;
+      color: var(--text);
+      font-weight: 500;
+      text-align: left;
+    }
+    .sp-badge-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .dot-teal { background: var(--teal); }
+    .dot-blue { background: var(--blue); }
+    .dot-navy { background: var(--navy); }
+
+    /* ── TICKER ── */
+    .ticker {
+      background: var(--navy);
+      padding: 11px 0;
+      border-bottom: 0.5px solid var(--border);
+      overflow: hidden;
+    }
+    .ticker-track {
+      display: flex;
+      gap: 4rem;
+      white-space: nowrap;
+      animation: ticker 30s linear infinite;
+    }
+    @keyframes ticker {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+    .ticker-item { font-size: 12px; color: rgba(255,255,255,0.6); }
+    .ticker-item span { color: #5DCAA5; font-weight: 500; margin-right: 6px; }
+
+    /* ── SECTION LABELS ── */
+    .section-wrap { border-bottom: 0.5px solid var(--border); }
+    .sec-label {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      font-weight: 500;
+      padding: 1.25rem 2rem 1rem;
+      border-bottom: 0.5px solid var(--border);
+      max-width: 1100px;
+      margin: 0 auto;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .sec-label a {
+      font-size: 12px;
+      color: var(--teal);
+      text-decoration: none;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+
+    /* ── PAST TALK FEATURE ── */
+    .past-talk {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .past-talk-left {
+      padding: 2.5rem 2rem;
+      border-right: 0.5px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .talk-conf-tag {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .talk-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+    .talk-title em { font-style: italic; color: var(--blue); }
+    .talk-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+    .talk-body strong { color: var(--text); font-weight: 500; }
+    .talk-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 1.5rem; }
+    .talk-tag {
+      font-size: 11px;
+      font-weight: 500;
+      padding: 4px 12px;
+      border-radius: 99px;
+    }
+    .tag-teal { background: var(--teal-light); color: var(--teal-dark); }
+    .tag-blue { background: var(--blue-light); color: var(--blue-dark); }
+    .tag-navy { background: var(--navy-light); color: var(--navy); }
+
+    .past-talk-right {
+      padding: 2.5rem 2rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+    .talk-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-left: 1rem;
+      border-left: 2.5px solid var(--teal);
+    }
+    .talk-stat.blue { border-left-color: var(--blue); }
+    .talk-stat.navy { border-left-color: var(--navy); }
+    .talk-stat-n {
+      font-family: var(--font-serif);
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--navy);
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+    .talk-stat-l {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── SIGNATURE TALKS ── */
+    .talks-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .talk-card {
+      padding: 2.25rem 2rem;
+      border-right: 0.5px solid var(--border);
+      transition: background 0.2s;
+    }
+    .talk-card:last-child { border-right: none; }
+    .talk-card:hover { background: var(--bg-soft); }
+    .talk-num {
+      font-family: var(--font-serif);
+      font-size: 48px;
+      font-weight: 600;
+      color: var(--navy);
+      opacity: 0.1;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+      letter-spacing: -2px;
+    }
+    .talk-card-tag {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--teal);
+      font-weight: 500;
+      margin-bottom: 0.75rem;
+    }
+    .talk-card-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.25;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.3px;
+    }
+    .talk-card-title em { font-style: italic; color: var(--blue); }
+    .talk-card-body {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+    }
+    .talk-card-takeaways {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .takeaway {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+    .takeaway-dot {
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 5px;
+      flex-shrink: 0;
+    }
+
+    /* ── WHO I SPEAK TO ── */
+    .audience-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .audience-card {
+      padding: 2rem 1.75rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .audience-card:last-child { border-right: none; }
+    .audience-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+      margin-bottom: 1rem;
+    }
+    .icon-navy { background: var(--navy); }
+    .icon-teal { background: var(--teal); }
+    .icon-blue { background: var(--blue); }
+    .audience-title {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .audience-body {
+      font-size: 12px;
+      line-height: 1.65;
+      color: var(--text-muted);
+    }
+
+    /* ── WHAT TO EXPECT ── */
+    .expect-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .expect-block {
+      padding: 2.5rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .expect-block:last-child { border-right: none; }
+    .expect-title {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+      letter-spacing: -0.5px;
+    }
+    .expect-title em { font-style: italic; color: var(--blue); }
+    .expect-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
+    }
+    .expect-body p { margin-bottom: 1rem; }
+    .expect-body p:last-child { margin-bottom: 0; }
+    .expect-body strong { color: var(--text); font-weight: 500; }
+
+    /* ── TESTIMONIAL ── */
+    .testimonial {
+      padding: 2.5rem 2rem;
+      display: grid;
+      grid-template-columns: 3px 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .t-bar { background: var(--teal); border-radius: 99px; align-self: stretch; }
+    .t-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(17px, 2.5vw, 21px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 0.75rem;
+    }
+    .t-attr { font-size: 13px; color: var(--text-muted); }
+    .t-attr strong { color: var(--text); font-weight: 500; }
+
+    /* ── BOOKING CTA ── */
+    .booking-cta {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .booking-left {
+      padding: 2.5rem 2rem;
+      border-right: 0.5px solid var(--border);
+    }
+    .booking-title {
+      font-family: var(--font-serif);
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.2;
+      letter-spacing: -0.5px;
+      margin-bottom: 1rem;
+    }
+    .booking-title em { font-style: italic; color: var(--blue); }
+    .booking-body {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+    .booking-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 1.75rem;
+    }
+    .booking-detail {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .booking-detail-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--teal);
+      margin-top: 6px;
+      flex-shrink: 0;
+    }
+    .booking-detail strong { color: var(--text); font-weight: 500; }
+
+    .booking-right {
+      padding: 2.5rem 2rem 2.5rem 2.5rem;
+      background: var(--bg-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .booking-form-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.3px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 1rem;
+    }
+    .form-label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--text);
+      letter-spacing: 0.3px;
+    }
+    .form-input, .form-textarea, .form-select {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      color: var(--text);
+      background: white;
+      border: 0.5px solid var(--border-mid);
+      border-radius: 8px;
+      padding: 10px 14px;
+      transition: border-color 0.2s;
+      width: 100%;
+    }
+    .form-input:focus, .form-textarea:focus, .form-select:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(15, 123, 108, 0.1);
+    }
+    .form-textarea { resize: vertical; min-height: 100px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+    }
+    .form-note {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 0.75rem;
+      text-align: center;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 768px) {
+      .sp-hero { grid-template-columns: 1fr; }
+      .sp-hero-left { padding: 3rem 1.5rem 2rem; border-right: none; border-bottom: 0.5px solid var(--border); }
+      .sp-hero-right { padding: 2rem 1.5rem; }
+      .past-talk { grid-template-columns: 1fr; }
+      .past-talk-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .talks-grid { grid-template-columns: 1fr; }
+      .talk-card { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .talk-card:last-child { border-bottom: none; }
+      .audience-grid { grid-template-columns: 1fr 1fr; }
+      .audience-card:nth-child(2n) { border-right: none; }
+      .audience-card:nth-child(n+3) { border-top: 0.5px solid var(--border); }
+      .expect-grid { grid-template-columns: 1fr; }
+      .expect-block { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .expect-block:last-child { border-bottom: none; }
+      .booking-cta { grid-template-columns: 1fr; }
+      .booking-left { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .booking-right { padding: 2rem 1.5rem; }
+      .form-row { grid-template-columns: 1fr; }
+      .sec-label { padding: 1.25rem 1.5rem 1rem; }
+    }
+
+    .playbook-float { position: fixed; bottom: 2rem; right: 2rem; background: #0F7B6C; color: white; font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; padding: 12px 20px; border-radius: 99px; text-decoration: none; box-shadow: 0 4px 20px rgba(15,123,108,0.35); z-index: 999; display: flex; align-items: center; gap: 6px; white-space: nowrap; transition: background 0.2s, transform 0.2s; }
+    .playbook-float:hover { background: #0F6E56; transform: translateY(-2px); }
+    @media (max-width: 768px) { .playbook-float { bottom: 1.25rem; right: 1.25rem; font-size: 12px; padding: 10px 16px; } }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Brian C. Christensen",
+    "jobTitle": "Executive Product Manager",
+    "description": "Product management speaker and AI transformation keynote speaker based in Salt Lake City, Utah. Speaker at Front Conference 2023.",
+    "url": "https://briancchristensen.com",
+    "image": "https://briancchristensen.com/images/headshot.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Salt Lake City",
+      "addressRegion": "UT",
+      "addressCountry": "US"
+    },
+    "knowsAbout": [
+      "Product Management",
+      "AI Transformation",
+      "HealthTech",
+      "Enterprise Product Leadership",
+      "Keynote Speaking",
+      "SAFe Lean-Agile"
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/briancchristensen"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">Brian C. Christensen</a>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/case-study-compensation-payout.html">Work</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html" style="color: var(--navy);">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
+        <li><a href="#book" class="nav-cta">Let's talk</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="sp-hero">
+    <div class="sp-hero-left">
+      <p class="eyebrow">Product Management Speaker · AI Transformation Keynote · HealthTech · Utah</p>
+      <h1 class="sp-title">Talks that actually<br>change how your<br>team <em>thinks about product.</em></h1>
+      <p class="sp-lead">
+        I speak on the intersection of <strong>product leadership, AI adoption, and enterprise transformation</strong> — drawing from 20+ years of doing the work at scale, not just teaching it. Every talk is grounded in real outcomes, real data, and real stories from the field.
+      </p>
+      <div class="btn-row">
+        <a href="#book" class="btn-primary">Book me to speak</a>
+        <a href="#talks" class="btn-secondary">See talk topics</a>
+      </div>
+    </div>
+    <div class="sp-hero-right">
+      <img src="/images/headshot-800.jpg" alt="Brian C. Christensen — Product Management Speaker" class="sp-headshot" />
+      <div class="sp-hero-name">Brian C. Christensen</div>
+      <div class="sp-hero-role">Executive Product Manager</div>
+      <div class="sp-badges">
+        <div class="sp-badge">
+          <div class="sp-badge-dot dot-teal"></div>
+          Speaker at Front Conference 2023
+        </div>
+        <div class="sp-badge">
+          <div class="sp-badge-dot dot-navy"></div>
+          20+ years in enterprise product leadership
+        </div>
+        <div class="sp-badge">
+          <div class="sp-badge-dot dot-blue"></div>
+          SAFe® certified · Pendo certified
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── TICKER ── -->
+  <div class="ticker" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span>Speaker</span>Front Conference 2023</span>
+      <span class="ticker-item"><span>Experience</span>20+ years enterprise PM leadership</span>
+      <span class="ticker-item"><span>Topics</span>AI Transformation · Product Strategy · Leadership</span>
+      <span class="ticker-item"><span>Audience</span>PMs · Engineering Leaders · Executives · Conferences</span>
+      <span class="ticker-item"><span>Format</span>Keynote · Workshop · Panel · Fireside Chat</span>
+      <span class="ticker-item"><span>Speaker</span>Front Conference 2023</span>
+      <span class="ticker-item"><span>Experience</span>20+ years enterprise PM leadership</span>
+      <span class="ticker-item"><span>Topics</span>AI Transformation · Product Strategy · Leadership</span>
+      <span class="ticker-item"><span>Audience</span>PMs · Engineering Leaders · Executives · Conferences</span>
+      <span class="ticker-item"><span>Format</span>Keynote · Workshop · Panel · Fireside Chat</span>
+    </div>
+  </div>
+
+  <!-- ── PAST TALK ── -->
+  <div class="section-wrap">
+    <div class="sec-label">
+      <span>Featured talk</span>
+      <a href="https://lnkd.in/gncwJvU2" target="_blank" rel="noopener noreferrer">Watch the recording →</a>
+    </div>
+    <div class="past-talk">
+      <div class="past-talk-left">
+        <div class="talk-conf-tag">Front Conference 2023 · Salt Lake City, UT</div>
+        <h2 class="talk-title">Leading Projects When<br><em>Stakeholders Say No</em></h2>
+        <p class="talk-body">
+          Every product leader eventually faces the moment where the most important thing to build is the hardest thing to get approved. In this talk at Front Conference 2023, I shared a framework for getting product work moving when you're hitting organizational resistance — drawing from real enterprise scenarios where stakeholder alignment was the bottleneck, not execution.
+        </p>
+        <p class="talk-body">
+          The session covered <strong>how to build trust before you need it</strong>, how to reframe resistant stakeholders as partners rather than obstacles, and the specific communication approaches that turn "no" into "let's figure out how."
+        </p>
+        <div class="talk-tags">
+          <span class="talk-tag tag-teal">Stakeholder management</span>
+          <span class="talk-tag tag-blue">Product leadership</span>
+          <span class="talk-tag tag-navy">Organizational change</span>
+        </div>
+        <a href="https://lnkd.in/gncwJvU2" target="_blank" rel="noopener noreferrer" class="btn-secondary" style="align-self: flex-start;">Watch the talk →</a>
+      </div>
+      <div class="past-talk-right">
+        <div class="talk-stat">
+          <span class="talk-stat-n">2023</span>
+          <span class="talk-stat-l">Front Conference — one of the premier product & design conferences in the Mountain West</span>
+        </div>
+        <div class="talk-stat blue">
+          <span class="talk-stat-n">20+</span>
+          <span class="talk-stat-l">Years of real-world enterprise experience behind every story and framework shared</span>
+        </div>
+        <div class="talk-stat navy">
+          <span class="talk-stat-n">Live</span>
+          <span class="talk-stat-l">Recording available — see the full session from the event</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SIGNATURE TALKS ── -->
+  <div class="section-wrap" id="talks">
+    <div class="sec-label"><span>Signature talk topics</span></div>
+    <div class="talks-grid">
+      <div class="talk-card">
+        <div class="talk-num">01</div>
+        <div class="talk-card-tag">AI · Product Leadership</div>
+        <h3 class="talk-card-title">Leading the <em>10× Team</em>: AI Transformation for Product Organizations</h3>
+        <p class="talk-card-body">Most companies are talking about AI. Few are actually changing how their teams work with it. This talk shares the exact approach I used to drive an org-wide AI initiative across product and engineering — targeting a 10× output increase — with early results already confirmed.</p>
+        <div class="talk-card-takeaways">
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Why AI adoption fails and what to do instead</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>The Jurassic Park test: can vs. should</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>A practical framework for org-wide AI rollout</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Real metrics from an in-progress enterprise initiative</span></div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">02</div>
+        <div class="talk-card-tag">Strategy · Outcomes</div>
+        <h3 class="talk-card-title">Stop Measuring Outputs. <em>Start Delivering Outcomes.</em></h3>
+        <p class="talk-card-body">The biggest gap between good PMs and great ones isn't technical skill — it's whether they're optimizing for shipping or for results. This talk breaks down the outputs vs. outcomes shift with concrete examples, real data, and a framework any team can implement immediately.</p>
+        <div class="talk-card-takeaways">
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Why output thinking persists — even on great teams</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>How to reframe roadmaps as hypothesis lists</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Building a culture where "did it work?" is the standard</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Stakeholder conversations that shift the metrics discussion</span></div>
+        </div>
+      </div>
+      <div class="talk-card">
+        <div class="talk-num">03</div>
+        <div class="talk-card-tag">Leadership · Culture</div>
+        <h3 class="talk-card-title">Leading Projects When <em>Stakeholders Say No</em></h3>
+        <p class="talk-card-body">Every product leader hits the wall — the project that matters most, facing the most resistance. This talk (from Front Conference 2023) shares a proven framework for getting critical product work approved and moving when you're navigating organizational friction.</p>
+        <div class="talk-card-takeaways">
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Building trust before you need to spend it</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Reframing resistant stakeholders as partners</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>Communication approaches that turn no into yes</span></div>
+          <div class="takeaway"><div class="takeaway-dot"></div><span>When to push back and when to adapt</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHO I SPEAK TO ── -->
+  <div class="section-wrap">
+    <div class="sec-label"><span>Who I speak to</span></div>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon icon-teal">🎯</div>
+        <div class="audience-title">Product conferences</div>
+        <p class="audience-body">PM summits, product leadership events, and industry conferences looking for practical talks grounded in real enterprise experience.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon icon-navy">🏢</div>
+        <div class="audience-title">Corporate teams</div>
+        <p class="audience-body">Product and engineering teams at mid-size to enterprise companies going through AI adoption, transformation, or product culture change.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon icon-blue">🎓</div>
+        <div class="audience-title">Leadership offsites</div>
+        <p class="audience-body">Executive and senior leadership groups looking for a facilitated conversation on AI strategy, product direction, or organizational change.</p>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon icon-teal">🌐</div>
+        <div class="audience-title">HealthTech industry</div>
+        <p class="audience-body">Healthcare and health technology organizations navigating the intersection of regulated environments and modern product development practices.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── WHAT TO EXPECT ── -->
+  <div class="section-wrap">
+    <div class="sec-label"><span>What to expect</span></div>
+    <div class="expect-grid">
+      <div class="expect-block">
+        <h2 class="expect-title">Practical over <em>theoretical.</em></h2>
+        <div class="expect-body">
+          <p>I've been doing this work for over two decades — at enterprise scale, in regulated industries, with real budget pressure and real organizational politics. Every framework I share comes from something I've actually done, not something I've read about.</p>
+          <p>That means your audience walks away with ideas they can use Monday morning, not concepts they'll revisit at the next planning cycle and forget. <strong>Actionable is the standard.</strong></p>
+        </div>
+      </div>
+      <div class="expect-block">
+        <h2 class="expect-title">Tailored to your <em>audience and context.</em></h2>
+        <div class="expect-body">
+          <p>I do my homework before every engagement. I want to understand who's in the room, what they're struggling with, and what a successful talk looks like for your event. The frameworks are consistent — the examples, emphasis, and conversation are calibrated to what your people actually need.</p>
+          <p>Available for <strong>keynotes, breakout sessions, workshops, panels, and fireside chats</strong>. In-person and virtual formats both available.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TESTIMONIAL ── -->
+  <div class="section-wrap">
+    <div class="testimonial">
+      <div class="t-bar"></div>
+      <div>
+        <p class="t-quote">"Brian is a great trainer, communicator and leader. He is extremely enthusiastic about his work, which is infectious. He is capable of adapting to new working environments and has a very positive attitude. Brian is a take-charge person who is able to present creative solutions to complex problems and communicate the benefits clearly to any audience."</p>
+        <p class="t-attr"><strong>Shiloh Wilsted</strong> · Director of Distributor Experience · Teammate at USANA</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── BOOKING ── -->
+  <div class="section-wrap" id="book">
+    <div class="sec-label"><span>Book me to speak</span></div>
+    <div class="booking-cta">
+      <div class="booking-left">
+        <h2 class="booking-title">Let's make your event<br><em>one they actually remember.</em></h2>
+        <p class="booking-body">I take on a limited number of speaking engagements each year so I can give each event the attention it deserves. If you're planning a conference, corporate event, or leadership offsite and think one of my topics would resonate — I'd love to hear about it.</p>
+        <div class="booking-details">
+          <div class="booking-detail">
+            <div class="booking-detail-dot"></div>
+            <span><strong>Response time:</strong> I respond to all speaking inquiries within 3 business days</span>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-dot"></div>
+            <span><strong>Formats:</strong> Keynote (30–60 min), Workshop (90 min–half day), Panel, Fireside chat</span>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-dot"></div>
+            <span><strong>Location:</strong> Based in Salt Lake City, Utah — available nationally and virtually as a product management speaker, AI transformation keynote speaker, or workshop facilitator</span>
+          </div>
+          <div class="booking-detail">
+            <div class="booking-detail-dot"></div>
+            <span><strong>Topics:</strong> AI transformation, product strategy, outcomes vs. outputs, stakeholder leadership</span>
+          </div>
+        </div>
+        <div class="btn-row">
+          <a href="mailto:brian@briancchristensen.com?subject=Speaking%20Inquiry" class="btn-primary">Email me directly</a>
+          <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer" class="btn-secondary">Connect on LinkedIn</a>
+        </div>
+      </div>
+      <div class="booking-right">
+        <div class="booking-form-title">Tell me about your event</div>
+        <form class="booking-form" action="/contact.php" method="POST">
+          <input type="hidden" name="subject" value="Speaking Inquiry" />
+          <!-- Honeypot: hidden from humans, bots fill it in — rejected server-side -->
+          <div style="display:none;" aria-hidden="true">
+            <label for="sp-website">Leave this blank</label>
+            <input type="text" id="sp-website" name="website" tabindex="-1" autocomplete="off">
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="sp-name">Your name</label>
+              <input class="form-input" type="text" id="sp-name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="sp-email">Email</label>
+              <input class="form-input" type="email" id="sp-email" name="email" placeholder="jane@company.com" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sp-event">Event name & date</label>
+            <input class="form-input" type="text" id="sp-event" name="event" placeholder="ProductCon 2027 · March 15, 2027" />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sp-format">Format</label>
+            <select class="form-select" id="sp-format" name="format">
+              <option value="">Select a format</option>
+              <option>Keynote (30–60 min)</option>
+              <option>Workshop (90 min–half day)</option>
+              <option>Panel discussion</option>
+              <option>Fireside chat</option>
+              <option>Corporate team session</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="sp-message">Tell me more about your event and audience</label>
+            <textarea class="form-textarea" id="sp-message" name="message" placeholder="Who's your audience? What are they struggling with? What would make this talk a success for you?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary form-submit">Send speaking inquiry</button>
+          <p class="form-note">I respond to all inquiries within 3 business days.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <span class="footer-logo">Brian C. Christensen</span>
+    <div class="footer-links">
+      <a href="/#work">Work</a>
+      <a href="/about.html">About</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
+      <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="mailto:brian@briancchristensen.com">Email</a>
+    </div>
+    <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
+  </footer>
+
+  <a href="/pm-level/" class="playbook-float" aria-label="Take the PM Level Assessment">📊 Free PM Level Quiz</a>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/analytics-events.js" defer></script>
+
+</body>
+</html>

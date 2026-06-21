@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-3M3K7W9SXV"></script>
   <script>
@@ -9,9 +11,17 @@
     gtag('js', new Date());
     gtag('config', 'G-3M3K7W9SXV');
   </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Writing & thinking from Brian C. Christensen — Executive Product Manager" />
+  <meta name="description" content="PM insights, AI transformation strategy, and leadership thinking from Brian C. Christensen — Executive PM with 20+ years in HealthTech." />
+  <meta property="og:title" content="Writing & Thinking — Brian C. Christensen" />
+  <meta property="og:description" content="Product management insights, AI transformation strategies, and leadership thinking from an Executive PM with 20+ years in HealthTech." />
+  <meta property="og:url" content="https://briancchristensen.com/blog/" />
+  <meta property="og:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Writing & Thinking — Brian C. Christensen" />
+  <meta name="twitter:description" content="Product management insights, AI transformation strategies, and leadership thinking from an Executive PM." />
+  <meta name="twitter:image" content="https://briancchristensen.com/images/headshot.jpg" />
+  <link rel="canonical" href="https://briancchristensen.com/blog/" />
   <title>Writing — Brian C. Christensen</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,15 +35,15 @@
   <nav>
     <div class="nav-inner">
       <a href="/" class="nav-logo">Brian C. Christensen</a>
-      <button class="nav-toggle" aria-label="Toggle menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
         <li><a href="/#work">Work</a></li>
         <li><a href="/about.html">About</a></li>
-        <li><a href="/#writing">Writing</a></li>
-        <li><a href="/#ai-services">AI Services</a></li>
-        <li><a href="https://brianchris.gumroad.com/l/pm_promotion_playbook" target="_blank">PM Playbook</a></li>
+        <li><a href="/blog/">Writing</a></li>
+        <li><a href="/speaking.html">Speaking</a></li>
+        <li><a href="/pm-level/">PM Level Quiz</a></li>
         <li><a href="/#contact" class="nav-cta">Let's talk</a></li>
       </ul>
     </div>
@@ -69,11 +79,25 @@
   </section>
 
   <div class="posts-grid" id="posts">
+    <a href="the-10x-day.html" class="post-card">
+      <div class="post-date">May 30, 2026</div>
+      <div class="post-cat">AI</div>
+      <h2 class="post-title">The 10× Day</h2>
+      <p class="post-excerpt">We told our developers to turn off their IDEs and let AI do the work. By end of day they'd moved two applications each — a 10× change in throughput. Here's the result, and the five things I'm not yet concluding from it.</p>
+      <span class="post-link">Read post →</span>
+    </a>
     <a href="why-ai-is-non-negotiable-for-product-managers.html" class="post-card">
       <div class="post-date">April 5, 2026</div>
       <div class="post-cat">Article</div>
       <h2 class="post-title">Why AI is Non-Negotiable for Product Managers</h2>
       <p class="post-excerpt">AI isn't the future of product management — it's already here. After two decades leading product teams, here's what I've learned about using it effectively, responsibly, and without losing what makes great PMs irreplaceable.</p>
+      <span class="post-link">Read post →</span>
+    </a>
+    <a href="stop-measuring-outputs-start-delivering-outcomes.html" class="post-card">
+      <div class="post-date">April 17, 2026</div>
+      <div class="post-cat">Product Management</div>
+      <h2 class="post-title">Stop Measuring Outputs. Start Delivering Outcomes.</h2>
+      <p class="post-excerpt">After 20 years in PM, the single biggest mindset shift separating great PMs from good ones isn't technical skill. It's the move from outputs to outcomes — and most teams are still getting it wrong.</p>
       <span class="post-link">Read post →</span>
     </a>
     <a href="importance-of-feedback.html" class="post-card">
@@ -357,15 +381,21 @@
     <div class="footer-links" aria-label="Footer navigation">
       <a href="/#work">Work</a>
       <a href="/about.html">About</a>
-      <a href="/#writing">Writing</a>
-      <a href="/#ai-services">AI Services</a>
+      <a href="/blog/">Writing</a>
+      <a href="/speaking.html">Speaking</a>
       <a href="https://www.linkedin.com/in/briancchristensen" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="mailto:brian@briancchristensen.com">Email</a>
     </div>
     <span class="footer-copy">&copy; 2026 Brian C. Christensen</span>
   </footer>
 
+  <script src="/js/main.js"></script>
   <script src="/js/blog-static.js"></script>
+  <script src="/js/blog-back-to-top.js"></script>
+
+  <script src="/js/analytics-events.js" defer></script>
+
+<a href="/pm-level/" class="playbook-float" aria-label="Take the PM Level Assessment">📊 Free PM Level Quiz</a>
 
 </body>
 </html>
